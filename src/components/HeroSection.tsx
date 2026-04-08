@@ -46,7 +46,7 @@ const HeroSection = () => {
           </div>
 
           {/* Photo */}
-          <div className="flex justify-center lg:justify-end animate-fade-in" style={{ animationDelay: "0.3s" }}>
+          <div className="justify-center lg:justify-end animate-fade-in flex flex-row" style={{ animationDelay: "0.3s" }}>
             <div className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
               <div className="absolute inset-0 rounded-2xl bg-primary/10 translate-x-3 translate-y-3" />
               <img
