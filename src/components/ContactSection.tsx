@@ -16,10 +16,10 @@ const ContactSection = () => {
           <div>
             <p className="text-xs font-medium tracking-widest uppercase text-accent mb-4">Contact</p>
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">
-              Let's Work Together
+              Let's Connect
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Whether you're a local business looking to grow, or an organization seeking a marketing strategist — I'd love to connect.
+              Whether you're looking for a marketing strategist, want to collaborate on a project, or just want to connect — I'd love to hear from you.
             </p>
             <div className="flex items-center gap-3 text-sm text-foreground">
               <Mail size={18} className="text-primary" />
