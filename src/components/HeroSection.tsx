@@ -13,11 +13,11 @@ const HeroSection = () => {
           {/* Photo */}
           <div className="animate-fade-in mb-8">
             <div className="relative w-56 h-56 sm:w-64 sm:h-64 lg:w-72 lg:h-72">
-              <div className="absolute inset-0 rounded-full bg-primary/10 translate-x-2 translate-y-2" />
+              <div className="absolute inset-0 rounded-2xl bg-primary/10 translate-x-2 translate-y-2" />
               <img
                 src={headshot}
                 alt="Portrait"
-                className="relative w-full h-full object-cover object-top rounded-full border-2 border-border shadow-lg"
+                className="relative w-full h-full object-cover object-top rounded-2xl border-2 border-border shadow-lg"
               />
             </div>
           </div>
