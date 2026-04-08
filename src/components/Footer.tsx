@@ -4,7 +4,7 @@ const Footer = () => {
       <div className="section-container flex flex-col md:flex-row items-center justify-between gap-4">
         <span className="font-heading text-lg font-bold text-foreground">Clarvey</span>
         <p className="text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Clarvey. All rights reserved.
+          © {new Date().getFullYear()} All rights reserved. Built with intention.
         </p>
       </div>
     </footer>
