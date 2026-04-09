@@ -3,36 +3,47 @@ import headshot from "@/assets/headshot.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center section-padding pt-24 overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0">
+    <section className="relative min-h-screen flex items-stretch overflow-hidden">
+      {/* Left: Photo */}
+      <div className="hidden lg:block lg:w-1/2 relative">
+        <img
+          src={headshot}
+          alt="Delainey Suraju"
+          className="w-full h-full object-cover object-top"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent to-background/20" />
+      </div>
+
+      {/* Mobile: Background image */}
+      <div className="absolute inset-0 lg:hidden">
         <img
           src={headshot}
           alt=""
           className="w-full h-full object-cover object-top"
         />
-        <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/40" />
+        <div className="absolute inset-0 bg-background/75 backdrop-blur-sm" />
       </div>
 
-      <div className="section-container w-full relative z-10">
-        <div className="flex flex-col items-center text-center">
+      {/* Right: Content */}
+      <div className="relative z-10 w-full lg:w-1/2 flex flex-col justify-center items-center lg:items-start section-padding">
+        <div className="max-w-xl mx-auto lg:mx-0 lg:pl-16 text-center lg:text-left">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full border border-border bg-card/60 backdrop-blur-md text-xs font-medium tracking-widest uppercase text-muted-foreground animate-fade-in" style={{ animationDelay: "0.15s" }}>
             <span className="w-2 h-2 rounded-full bg-accent" />
             Student-Athlete · Entrepreneur · Strategist
           </div>
 
-          {/* Title & Content */}
-          <h1 className="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-heading font-bold leading-[1.1] text-foreground animate-fade-up" style={{ animationDelay: "0.2s" }}>
-            Delainey Suraju
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-heading font-bold leading-[1.05] text-foreground animate-fade-up" style={{ animationDelay: "0.2s" }}>
+            Delainey
+            <br />
+            Suraju
           </h1>
 
-          <p className="mt-7 text-lg text-muted-foreground leading-relaxed max-w-xl animate-fade-up" style={{ animationDelay: "0.3s" }}>
+          <p className="mt-7 text-lg text-muted-foreground leading-relaxed max-w-md animate-fade-up" style={{ animationDelay: "0.3s" }}>
             A student-athlete turned entrepreneur focused on business, marketing, and real-world growth.
           </p>
 
-          <div className="mt-10 flex flex-wrap justify-center gap-4 animate-fade-up" style={{ animationDelay: "0.4s" }}>
+          <div className="mt-10 flex flex-wrap justify-center lg:justify-start gap-4 animate-fade-up" style={{ animationDelay: "0.4s" }}>
             <a
               href="#about"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-md bg-primary text-primary-foreground text-sm font-semibold tracking-wide hover:opacity-90 transition-opacity"
