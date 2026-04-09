@@ -25,11 +25,7 @@ const HeroSection = () => {
 
           {/* Title & Content */}
           <h1 className="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-heading font-bold leading-[1.1] text-foreground animate-fade-up" style={{ animationDelay: "0.2s" }}>
-            Building, Learning,
-            <br />
-            and Growing Through
-            <br />
-            <span className="text-primary">Real Business.</span>
+            Delainey Suraju
           </h1>
 
           <p className="mt-7 text-lg text-muted-foreground leading-relaxed max-w-xl animate-fade-up" style={{ animationDelay: "0.3s" }}>
