@@ -14,16 +14,16 @@ const AboutSection = () => {
           {/* Story column */}
           <div className="lg:col-span-3 space-y-6 text-muted-foreground leading-relaxed">
             <p>
-              I'm a senior at the <span className="text-foreground font-medium">University of St. Thomas</span> and a former college football student-athlete. The discipline, resilience, and competitive mindset I built on the field now drive everything I do in business.
+              My name is Delainey Suraju, and I am a senior at the <span className="text-foreground font-medium">University of St. Thomas</span> with a background built on discipline, resilience, and a strong drive to build something meaningful.
             </p>
             <p>
-              I started my entrepreneurial journey by founding <span className="text-foreground font-medium">GYMOPTIMA</span>, a social media marketing agency that worked with local gyms and small businesses. That experience taught me how to sell, how to serve clients, and how to build something from nothing.
+              I grew up in Minnesota after my parents immigrated from <span className="text-foreground font-medium">Ghana</span>, and from a young age I saw the sacrifices they made to create opportunities for our family. That work ethic shaped me early and inspired my desire to one day build something of my own and give back.
             </p>
             <p>
-              I've since gained experience in banking at <span className="text-foreground font-medium">U.S. Bank</span>, real estate wholesaling through cold calling and deal negotiation, and marketing strategy for a real operating business. Each role has sharpened a different skill — but the through-line has always been the same: <span className="text-foreground font-medium">helping businesses grow and solving real problems</span>.
+              I carried that mindset into football, earning the opportunity to play at the <span className="text-foreground font-medium">University of St. Thomas</span>. Being a student-athlete taught me consistency, accountability, and how to perform under pressure.
             </p>
             <p>
-              I don't just study business — I build, test, and learn from it every day.
+              Today, I am focused on building my marketing brand, <span className="text-foreground font-medium">Clarvey</span>, where I apply what I've learned to real businesses—starting with hands-on work helping grow a local grocery store.
             </p>
           </div>
 
