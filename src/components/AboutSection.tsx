@@ -1,3 +1,5 @@
+import footballImg from "@/assets/football.jpg";
+
 const AboutSection = () => {
   return (
     <section id="about" className="section-padding bg-card">
