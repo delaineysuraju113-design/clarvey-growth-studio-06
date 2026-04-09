@@ -4,10 +4,10 @@ const AboutSection = () => {
       <div className="section-container">
         <p className="text-xs font-medium tracking-widest uppercase text-accent mb-4">About Me</p>
         <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
-          Discipline Meets Ambition
+          Purpose-Driven Discipline
         </h2>
         <p className="text-muted-foreground max-w-2xl mb-12 leading-relaxed">
-          My path hasn't been conventional — it's been intentional.
+          My past has prepared me; my vision is what propels me.
         </p>
 
         <div className="grid lg:grid-cols-5 gap-12 items-start">
