@@ -6,7 +6,7 @@ const HeroSection = () => {
       <img
         src={headshot}
         alt="Delainey Suraju"
-        className="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-full object-cover object-top shadow-lg animate-fade-up"
+        className="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-md object-cover object-top shadow-lg animate-fade-up"
       />
 
       <h1 className="mt-8 text-5xl sm:text-6xl lg:text-7xl font-heading font-bold leading-[1.05] text-foreground animate-fade-up" style={{ animationDelay: "0.2s" }}>
