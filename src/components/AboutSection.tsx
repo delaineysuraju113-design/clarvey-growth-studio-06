@@ -1,3 +1,5 @@
+import footballImg from "@/assets/football.jpg";
+
 const AboutSection = () => {
   return (
     <section id="about" className="section-padding bg-card">
@@ -27,24 +29,13 @@ const AboutSection = () => {
             </p>
           </div>
 
-          {/* Attributes column */}
-          <div className="lg:col-span-2 space-y-3">
-            {[
-              { label: "Mindset", value: "Discipline from athletics, sharpened by competition" },
-              { label: "Drive", value: "Entrepreneurial — I build before I'm told to" },
-              { label: "Skillset", value: "Marketing, sales, client acquisition, strategy" },
-              { label: "Approach", value: "Learn by doing, measure results, iterate fast" },
-            ].map((item) => (
-              <div
-                key={item.label}
-                className="p-5 rounded-lg bg-background border border-border"
-              >
-                <p className="text-xs font-semibold tracking-widest uppercase text-primary mb-1">
-                  {item.label}
-                </p>
-                <p className="text-sm text-muted-foreground leading-relaxed">{item.value}</p>
-              </div>
-            ))}
+          {/* Photo column */}
+          <div className="lg:col-span-2">
+            <img
+              src={footballImg}
+              alt="Delainey Suraju #44 on the field at University of St. Thomas"
+              className="w-full rounded-lg object-cover shadow-lg"
+            />
           </div>
         </div>
       </div>
