@@ -6,6 +6,15 @@ const experiences = [
     company: "Clarvey",
     type: "Entrepreneurship",
     desc: "Founded a social media marketing agency serving local gyms and small businesses. Led everything — client acquisition, content strategy, campaign execution, and results tracking. Learned how to build from the ground up.",
+    active: true,
+  },
+  {
+    role: "Recruiter / Account Manager",
+    company: "Insight Global",
+    location: "Minneapolis, MN",
+    date: "Jul 2026 – Present",
+    type: "Recruiting & Sales",
+    desc: "Lead full-cycle recruitment and account management by aligning elite talent with client business goals. Manage the end-to-end hiring process—from sourcing and coaching candidates to cultivating strategic partnerships—while consistently exceeding revenue and placement metrics.",
   },
   {
     role: "Client Relationship Consultant",
@@ -19,21 +28,21 @@ const experiences = [
     type: "Sales & Negotiation",
     desc: "Conducted high-volume cold calling, sourced off-market deals, and negotiated contracts. Developed resilience, persuasion skills, and the ability to create opportunity from nothing.",
   },
-  {
-    role: "Assistant Manager",
-    company: "7 Step Detailers",
-    type: "Active Project",
-    desc: "Managing operations, customer relationships, and day-to-day workflow for an auto detailing business. Building leadership skills through hands-on team coordination and service delivery.",
-    active: true,
-  },
 ];
 
 const leadership = [
-  "Division I Student-Athlete, University of St. Thomas Football",
-  "SAAC Representative (Student-Athlete Advisory Committee)",
-  "FCA Leader (Fellowship of Christian Athletes)",
-  "Student Advocate – Higher Education Policy",
-  "Led outreach with a Minnesota State Representative to discuss proposed State Grant changes and their impact on student affordability",
+  <>
+    <strong>Student-Athlete, University of St. Thomas Football</strong> — Division I
+  </>,
+  <>
+    <strong>SAAC Representative</strong> (Student-Athlete Advisory Committee)
+  </>,
+  <>
+    <strong>FCA Leader</strong> (Fellowship of Christian Athletes)
+  </>,
+  <>
+    <strong>Student Advocate – Higher Education Policy</strong> | Partnered with a Minnesota State Representative to address proposed State Grant reforms and their implications for student affordability.
+  </>,
 ];
 
 const ExperienceSection = () => {
@@ -64,6 +73,9 @@ const ExperienceSection = () => {
                 <div>
                   <h3 className="text-base font-semibold text-foreground">{exp.role}</h3>
                   <p className="text-sm text-primary font-medium">{exp.company}</p>
+                  {exp.location && (
+                    <p className="text-xs text-muted-foreground">{exp.location} | {exp.date}</p>
+                  )}
                   <span className="inline-block mt-1 text-[10px] font-medium tracking-widest uppercase text-muted-foreground">
                     {exp.type}
                   </span>
@@ -96,7 +108,7 @@ const ExperienceSection = () => {
             {leadership.map((item, i) => (
               <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground leading-relaxed">
                 <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
-                {item}
+                <span>{item}</span>
               </li>
             ))}
           </ul>
