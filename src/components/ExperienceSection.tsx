@@ -1,9 +1,9 @@
-import { Briefcase } from "lucide-react";
+import { Briefcase, Shield } from "lucide-react";
 
 const experiences = [
   {
     role: "Founder",
-    company: "GYMOPTIMA",
+    company: "Clarvey",
     type: "Entrepreneurship",
     desc: "Founded a social media marketing agency serving local gyms and small businesses. Led everything — client acquisition, content strategy, campaign execution, and results tracking. Learned how to build from the ground up.",
   },
@@ -20,12 +20,20 @@ const experiences = [
     desc: "Conducted high-volume cold calling, sourced off-market deals, and negotiated contracts. Developed resilience, persuasion skills, and the ability to create opportunity from nothing.",
   },
   {
-    role: "Marketing Strategist",
-    company: "Adom African Market",
+    role: "Assistant Manager",
+    company: "7 Step Detailers",
     type: "Active Project",
-    desc: "Leading website development, social media growth, customer acquisition, and brand positioning for a family-owned grocery business. This is my primary case study and testing ground.",
+    desc: "Managing operations, customer relationships, and day-to-day workflow for an auto detailing business. Building leadership skills through hands-on team coordination and service delivery.",
     active: true,
   },
+];
+
+const leadership = [
+  "Division I Student-Athlete, University of St. Thomas Football",
+  "SAAC Representative (Student-Athlete Advisory Committee)",
+  "FCA Leader (Fellowship of Christian Athletes)",
+  "Student Advocate – Higher Education Policy",
+  "Led outreach with a Minnesota State Representative to discuss proposed State Grant changes and their impact on student affordability",
 ];
 
 const ExperienceSection = () => {
@@ -45,7 +53,7 @@ const ExperienceSection = () => {
             <div
               key={exp.company}
               className={`group relative flex flex-col md:flex-row md:items-start gap-5 md:gap-14 py-10 ${
-                i !== experiences.length - 1 ? "border-b border-border" : ""
+                i !== experiences.length - 1 ? "border-b border-border" : "border-b border-border"
               }`}
             >
               {/* Left */}
@@ -74,6 +82,24 @@ const ExperienceSection = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Leadership Section */}
+        <div className="mt-16">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-9 h-9 rounded-md bg-card border border-border flex items-center justify-center shrink-0">
+              <Shield size={16} className="text-primary" />
+            </div>
+            <h3 className="text-2xl font-heading font-bold text-foreground">Leadership</h3>
+          </div>
+          <ul className="space-y-4 ml-12">
+            {leadership.map((item, i) => (
+              <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground leading-relaxed">
+                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

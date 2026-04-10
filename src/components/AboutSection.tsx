@@ -12,9 +12,9 @@ const AboutSection = () => {
           My past has prepared me; my vision is what propels me.
         </p>
 
-        <div className="grid lg:grid-cols-5 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Story column */}
-          <div className="lg:col-span-3 space-y-6 text-muted-foreground leading-relaxed">
+          <div className="space-y-6 text-muted-foreground leading-relaxed">
             <p>
               My name is Delainey Suraju, and I am a senior at the <span className="text-foreground font-medium">University of St. Thomas</span> with a background built on discipline, resilience, and a strong drive to build something meaningful.
             </p>
@@ -30,11 +30,11 @@ const AboutSection = () => {
           </div>
 
           {/* Photo column */}
-          <div className="lg:col-span-2">
+          <div>
             <img
               src={footballImg}
               alt="Delainey Suraju #44 on the field at University of St. Thomas"
-              className="w-full rounded-lg object-cover shadow-lg"
+              className="w-full rounded-lg object-cover shadow-lg aspect-[3/4]"
             />
           </div>
         </div>
