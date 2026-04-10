@@ -9,19 +9,16 @@ const BuildingSection = () => {
           Clarvey
         </h2>
         <p className="text-muted-foreground max-w-2xl mb-12 leading-relaxed">
-          My next step in building a marketing brand rooted in one core idea: helping businesses get clear — and get seen.
+          Helping overlooked businesses get clear — and get seen.
         </p>
 
         <div className="grid md:grid-cols-2 gap-10 items-start">
           <div className="space-y-6 text-muted-foreground leading-relaxed">
             <p>
-              <span className="text-foreground font-medium">Clarvey</span> is a marketing brand I'm building to help local businesses grow by improving their visibility and messaging. It's not theory — it's built on real strategies, tested on real businesses.
+              <span className="text-foreground font-medium">Clarvey</span> is a research-driven marketing brand built to help immigrant entrepreneurs, women, and underrepresented founders grow beyond their initial communities. It is a strategic response to a documented systemic gap in business growth.
             </p>
             <p>
-              Many local and culturally rooted businesses have incredible products and loyal customers, but struggle to grow because they lack a digital presence. This creates a <span className="text-foreground font-medium">visibility gap</span> — they're not failing, they're just not being seen.
-            </p>
-            <p>
-              Clarvey exists to close that gap through better marketing, clearer messaging, and modern digital presence.
+              Data shows the playing field isn't level: male-led firms receive significantly higher loan approval rates and up to <span className="text-foreground font-medium">34% more capital</span> than underrepresented founders. Clarvey exists to close this gap by leveraging cutting-edge AI-driven tools and high-level strategic resources to provide elite marketing and a modern digital presence for the entrepreneurs the system often overlooks.
             </p>
           </div>
 
@@ -38,10 +35,10 @@ const BuildingSection = () => {
               </div>
               <ul className="space-y-3">
                 {[
-                  "Apply proven strategies from real business experience",
-                  "Help local businesses grow through marketing",
-                  "Build a portfolio of measurable results",
-                  "Scale into a full consulting practice",
+                  "Scale research-driven strategies that drive real business growth",
+                  "Help underrepresented founders grow beyond local markets",
+                  "Build a portfolio focused on measurable results and impact",
+                  "Grow Clarvey into a national, equity-driven consulting brand",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2.5 text-sm text-muted-foreground">
                     <ArrowUpRight size={14} className="text-accent mt-0.5 shrink-0" />

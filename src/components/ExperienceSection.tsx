@@ -24,7 +24,7 @@ const experiences = [
   },
   {
     role: "Wholesaling Associate",
-    company: "Real Estate",
+    company: "Pinnacle Estate",
     type: "Sales & Negotiation",
     desc: "Conducted high-volume cold calling, sourced off-market deals, and negotiated contracts. Developed resilience, persuasion skills, and the ability to create opportunity from nothing.",
   },

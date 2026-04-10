@@ -23,7 +23,12 @@ const VisionSection = () => {
           </div>
 
           <div className="mt-10 flex flex-wrap gap-4">
-            {["Consulting & Strategy", "Business Leadership", "Building & Scaling", "Marketing Operations"].map((tag) => (
+            {[
+              "Scale research-driven strategies that drive real business growth",
+              "Help underrepresented founders grow beyond local markets",
+              "Build a portfolio focused on measurable results and impact",
+              "Grow Clarvey into a national, equity-driven consulting brand",
+            ].map((tag) => (
               <span
                 key={tag}
                 className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-border text-xs font-medium text-foreground bg-background"
