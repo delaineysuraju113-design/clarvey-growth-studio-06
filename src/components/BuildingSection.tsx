@@ -35,10 +35,10 @@ const BuildingSection = () => {
               </div>
               <ul className="space-y-3">
                 {[
-                  "Apply proven strategies from real business experience",
-                  "Help local businesses grow through marketing",
-                  "Build a portfolio of measurable results",
-                  "Scale into a full consulting practice",
+                  "Scale research-driven strategies that drive real business growth",
+                  "Help underrepresented founders grow beyond local markets",
+                  "Build a portfolio focused on measurable results and impact",
+                  "Grow Clarvey into a national, equity-driven consulting brand",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2.5 text-sm text-muted-foreground">
                     <ArrowUpRight size={14} className="text-accent mt-0.5 shrink-0" />
