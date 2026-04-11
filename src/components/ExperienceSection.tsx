@@ -1,4 +1,6 @@
 import { Briefcase, Shield } from "lucide-react";
+import studentAdvocateImg from "@/assets/student-advocate.jpg";
+import fcaLeaderImg from "@/assets/fca-leader.jpg";
 
 const experiences = [
   {
