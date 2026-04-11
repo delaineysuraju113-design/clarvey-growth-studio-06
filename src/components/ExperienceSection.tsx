@@ -106,7 +106,7 @@ const ExperienceSection = () => {
             </div>
             <h3 className="text-2xl font-heading font-bold text-foreground">Leadership</h3>
           </div>
-          <ul className="space-y-4 ml-12">
+          <ul className="space-y-6 ml-12">
             {leadership.map((item, i) => (
               <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground leading-relaxed">
                 <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
@@ -114,6 +114,30 @@ const ExperienceSection = () => {
               </li>
             ))}
           </ul>
+
+          {/* Leadership Photos */}
+          <div className="grid md:grid-cols-2 gap-8 mt-10 ml-12">
+            <div>
+              <img
+                src={studentAdvocateImg}
+                alt="Delainey Suraju with Minnesota State Representative advocating for higher education policy"
+                className="w-full rounded-lg object-cover shadow-lg aspect-[4/5]"
+              />
+              <p className="text-xs text-muted-foreground mt-3 text-center italic">
+                Partnering with a Minnesota State Representative on student affordability policy
+              </p>
+            </div>
+            <div>
+              <img
+                src={fcaLeaderImg}
+                alt="Delainey Suraju with Fellowship of Christian Athletes team"
+                className="w-full rounded-lg object-cover shadow-lg aspect-[4/3]"
+              />
+              <p className="text-xs text-muted-foreground mt-3 text-center italic">
+                Fellowship of Christian Athletes — building community through faith and sport
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
