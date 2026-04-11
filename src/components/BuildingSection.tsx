@@ -19,19 +19,13 @@ const BuildingSection = () => {
         <div className="grid md:grid-cols-2 gap-10 items-start">
           <div className="space-y-6 text-muted-foreground leading-relaxed">
             <p>
-              <span className="text-foreground font-medium">Clarvey</span> is a research-driven marketing brand built to help immigrant entrepreneurs, women, and underrepresented founders grow beyond their initial communities. It is a strategic response to a documented systemic gap in business growth.
+              <span className="text-foreground font-medium">Clarvey</span> is a research-driven marketing agency built for the entrepreneurs America overlooks — immigrant founders, women business owners, and underrepresented communities ready to grow beyond their block.
             </p>
             <p>
-              African and ethnic grocery stores — along with many local businesses — often have loyal customer bases but struggle to grow beyond their immediate communities due to limited digital presence.
+              These businesses aren't failing. They're being held back. Today, <span className="text-foreground font-medium">97% of consumers</span> search online before ever walking through a door — and businesses without a strong digital presence aren't just missing clicks, they're missing customers entirely.
             </p>
             <p>
-              In today's market, <span className="text-foreground font-medium">97% of consumers</span> search online for local businesses, and <span className="text-foreground font-medium">80% research before visiting</span>. Without a strong online presence, businesses aren't just missing opportunities — they're invisible.
-            </p>
-            <p>
-              These businesses aren't failing — they're being held back by systems not built for their growth.
-            </p>
-            <p>
-              Clarvey exists to close that gap through research-driven strategy, modern digital presence, and marketing built for the entrepreneurs America overlooks.
+              The gap isn't a talent problem. It's a visibility problem. Clarvey exists to close it through research-backed strategy, modern digital presence, and marketing built for founders the mainstream market has long ignored.
             </p>
           </div>
 
