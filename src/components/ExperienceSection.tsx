@@ -1,6 +1,7 @@
 import { Briefcase, Shield } from "lucide-react";
 import studentAdvocateImg from "@/assets/student-advocate.jpg";
 import fcaLeaderImg from "@/assets/fca-leader.jpg";
+import footballTeamImg from "@/assets/football-team.jpg";
 
 const experiences = [
   {
@@ -127,15 +128,27 @@ const ExperienceSection = () => {
                 Partnering with a Minnesota State Representative on student affordability policy
               </p>
             </div>
-            <div>
-              <img
-                src={fcaLeaderImg}
-                alt="Delainey Suraju with Fellowship of Christian Athletes team"
-                className="w-full rounded-lg object-cover shadow-lg aspect-[4/3]"
-              />
-              <p className="text-xs text-muted-foreground mt-3 text-center italic">
-                Fellowship of Christian Athletes — building community through faith and sport
-              </p>
+            <div className="space-y-8">
+              <div>
+                <img
+                  src={fcaLeaderImg}
+                  alt="Delainey Suraju with Fellowship of Christian Athletes team"
+                  className="w-full rounded-lg object-cover shadow-lg aspect-[4/3]"
+                />
+                <p className="text-xs text-muted-foreground mt-3 text-center italic">
+                  Fellowship of Christian Athletes — building community through faith and sport
+                </p>
+              </div>
+              <div>
+                <img
+                  src={footballTeamImg}
+                  alt="Delainey Suraju #44 running onto the field with St. Thomas Tommies football team"
+                  className="w-full rounded-lg object-cover shadow-lg aspect-[4/3]"
+                />
+                <p className="text-xs text-muted-foreground mt-3 text-center italic">
+                  Game day with the St. Thomas Tommies — #44
+                </p>
+              </div>
             </div>
           </div>
         </div>
