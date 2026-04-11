@@ -12,10 +12,7 @@ const BuildingSection = () => {
             Clarvey
           </h2>
         </div>
-        <p className="text-muted-foreground max-w-2xl mb-4 leading-relaxed">
-          For <span className="text-foreground font-semibold">women</span>, <span className="text-foreground font-semibold">immigrant entrepreneurs</span>, and <span className="text-foreground font-semibold">underrepresented founders</span>.
-        </p>
-        <p className="text-muted-foreground max-w-2xl mb-12 leading-relaxed">
+        <p className="text-muted-foreground max-w-2xl mb-10 leading-relaxed">
           Helping overlooked businesses get clear — and get seen.
         </p>
 
@@ -25,7 +22,16 @@ const BuildingSection = () => {
               <span className="text-foreground font-medium">Clarvey</span> is a research-driven marketing brand built to help immigrant entrepreneurs, women, and underrepresented founders grow beyond their initial communities. It is a strategic response to a documented systemic gap in business growth.
             </p>
             <p>
-              Data shows the playing field isn't level: male-led firms receive significantly higher loan approval rates and up to <span className="text-foreground font-medium">34% more capital</span> than underrepresented founders. Clarvey exists to close this gap by leveraging cutting-edge AI-driven tools and high-level strategic resources to provide elite marketing and a modern digital presence for the entrepreneurs the system often overlooks.
+              African and ethnic grocery stores — along with many local businesses — often have loyal customer bases but struggle to grow beyond their immediate communities due to limited digital presence.
+            </p>
+            <p>
+              In today's market, <span className="text-foreground font-medium">97% of consumers</span> search online for local businesses, and <span className="text-foreground font-medium">80% research before visiting</span>. Without a strong online presence, businesses aren't just missing opportunities — they're invisible.
+            </p>
+            <p>
+              These businesses aren't failing — they're being held back by systems not built for their growth.
+            </p>
+            <p>
+              Clarvey exists to close that gap through research-driven strategy, modern digital presence, and marketing built for the entrepreneurs America overlooks.
             </p>
           </div>
 
