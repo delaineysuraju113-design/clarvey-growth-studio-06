@@ -5,7 +5,7 @@ const experiences = [
     role: "Founder",
     company: "Clarvey",
     type: "Entrepreneurship",
-    desc: "Founded a social media marketing agency serving local gyms and small businesses. Led everything — client acquisition, content strategy, campaign execution, and results tracking. Learned how to build from the ground up.",
+    desc: "Built a research-driven marketing brand helping immigrant, women, and underrepresented founders grow beyond their initial communities. Use AI-driven tools and strategic marketing to improve visibility and close systemic gaps in business growth.",
     active: true,
   },
   {
@@ -14,19 +14,19 @@ const experiences = [
     location: "Minneapolis, MN",
     date: "Jul 2026 – Present",
     type: "Recruiting & Sales",
-    desc: "Lead full-cycle recruitment and account management by aligning elite talent with client business goals. Manage the end-to-end hiring process—from sourcing and coaching candidates to cultivating strategic partnerships—while consistently exceeding revenue and placement metrics.",
+    desc: "Lead full-cycle recruiting and account management, aligning talent with client needs while driving placements and revenue growth.",
   },
   {
     role: "Client Relationship Consultant",
     company: "U.S. Bank",
     type: "Banking & Finance",
-    desc: "Managed client relationships in a fast-paced banking environment. Identified financial solutions, handled customer needs, and consistently met performance goals — building trust and communication skills along the way.",
+    desc: "Managed client relationships, delivered financial solutions, and consistently met performance goals in a fast-paced environment.",
   },
   {
     role: "Wholesaling Associate",
     company: "Pinnacle Estate",
     type: "Sales & Negotiation",
-    desc: "Conducted high-volume cold calling, sourced off-market deals, and negotiated contracts. Developed resilience, persuasion skills, and the ability to create opportunity from nothing.",
+    desc: "Generated leads through cold calling, sourced off-market deals, and negotiated contracts in a high-volume sales environment.",
   },
 ];
 
@@ -79,18 +79,18 @@ const ExperienceSection = () => {
                   <span className="inline-block mt-1 text-[10px] font-medium tracking-widest uppercase text-muted-foreground">
                     {exp.type}
                   </span>
+                  {exp.active && (
+                    <span className="inline-flex items-center gap-1.5 mt-1.5 text-xs font-medium text-accent">
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+                      Currently Active
+                    </span>
+                  )}
                 </div>
               </div>
 
               {/* Right */}
               <div className="flex-1">
                 <p className="text-sm text-muted-foreground leading-relaxed">{exp.desc}</p>
-                {exp.active && (
-                  <span className="inline-flex items-center gap-1.5 mt-3 text-xs font-medium text-accent">
-                    <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-                    Currently Active
-                  </span>
-                )}
               </div>
             </div>
           ))}
