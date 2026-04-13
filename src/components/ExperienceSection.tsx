@@ -83,10 +83,12 @@ const ExperienceSection = () => {
                     {exp.type}
                   </span>
                   {exp.active && (
-                    <span className="inline-flex items-center gap-1.5 mt-1.5 text-xs font-medium text-accent">
-                      <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-                      Currently Active
-                    </span>
+                    <div className="mt-1.5">
+                      <span className="inline-flex items-center gap-1.5 text-xs font-medium text-accent">
+                        <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+                        Currently Active
+                      </span>
+                    </div>
                   )}
                 </div>
               </div>
