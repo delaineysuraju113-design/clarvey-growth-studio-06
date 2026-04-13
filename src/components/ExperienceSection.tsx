@@ -76,8 +76,12 @@ const ExperienceSection = () => {
             >
               {/* Left */}
               <div className="md:w-72 shrink-0 flex items-start gap-3">
-                <div className="mt-0.5 w-9 h-9 rounded-md bg-card border border-border flex items-center justify-center shrink-0">
-                  <Briefcase size={16} className="text-primary" />
+                <div className="mt-0.5 w-9 h-9 rounded-md bg-card border border-border flex items-center justify-center shrink-0 overflow-hidden">
+                  {exp.logo ? (
+                    <img src={exp.logo} alt={`${exp.company} logo`} className="w-full h-full object-contain p-1" />
+                  ) : (
+                    <Briefcase size={16} className="text-primary" />
+                  )}
                 </div>
                 <div>
                   <h3 className="text-base font-semibold text-foreground">{exp.role}</h3>
