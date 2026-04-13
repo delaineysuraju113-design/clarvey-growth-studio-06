@@ -6,7 +6,7 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    window.location.href = `mailto:hello@clarvey.com?subject=Inquiry from ${formData.name}&body=${encodeURIComponent(formData.message)}`;
+    window.location.href = `mailto:delaineysuraju113@gmail.com?subject=Inquiry from ${formData.name}&body=${encodeURIComponent(formData.message)}`;
   };
 
   return (
@@ -23,7 +23,7 @@ const ContactSection = () => {
             </p>
             <div className="flex items-center gap-3 text-sm text-foreground">
               <Mail size={18} className="text-primary" />
-              <span>hello@clarvey.com</span>
+              <span>delaineysuraju113@gmail.com</span>
             </div>
           </div>
 
