@@ -2,6 +2,9 @@ import { Briefcase, Shield } from "lucide-react";
 import studentAdvocateImg from "@/assets/student-advocate.jpg";
 import fcaLeaderImg from "@/assets/fca-leader.jpg";
 import footballTeamImg from "@/assets/football-team.jpg";
+import clarveyLogo from "@/assets/clarvey-logo.png";
+import insightGlobalLogo from "@/assets/insight-global-logo.jpg";
+import usBankLogo from "@/assets/us-bank-logo.webp";
 
 const experiences = [
   {
@@ -10,6 +13,7 @@ const experiences = [
     type: "Entrepreneurship",
     desc: "Built a research-driven marketing brand helping immigrant, women, and underrepresented founders grow beyond their initial communities. Use AI-driven tools and strategic marketing to improve visibility and close systemic gaps in business growth.",
     active: true,
+    logo: clarveyLogo,
   },
   {
     role: "Recruiter / Account Manager",
@@ -18,12 +22,14 @@ const experiences = [
     date: "Jul 2026 – Present",
     type: "Recruiting & Sales",
     desc: "Lead full-cycle recruiting and account management, aligning talent with client needs while driving placements and revenue growth.",
+    logo: insightGlobalLogo,
   },
   {
     role: "Client Relationship Consultant",
     company: "U.S. Bank",
     type: "Banking & Finance",
     desc: "Managed client relationships, delivered financial solutions, and consistently met performance goals in a fast-paced environment.",
+    logo: usBankLogo,
   },
   {
     role: "Wholesaling Associate",
@@ -70,8 +76,12 @@ const ExperienceSection = () => {
             >
               {/* Left */}
               <div className="md:w-72 shrink-0 flex items-start gap-3">
-                <div className="mt-0.5 w-9 h-9 rounded-md bg-card border border-border flex items-center justify-center shrink-0">
-                  <Briefcase size={16} className="text-primary" />
+                <div className="mt-0.5 w-9 h-9 rounded-md bg-card border border-border flex items-center justify-center shrink-0 overflow-hidden">
+                  {exp.logo ? (
+                    <img src={exp.logo} alt={`${exp.company} logo`} className="w-full h-full object-contain p-1" />
+                  ) : (
+                    <Briefcase size={16} className="text-primary" />
+                  )}
                 </div>
                 <div>
                   <h3 className="text-base font-semibold text-foreground">{exp.role}</h3>
