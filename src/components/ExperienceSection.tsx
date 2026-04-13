@@ -129,23 +129,27 @@ const ExperienceSection = () => {
               </p>
             </div>
             <div className="flex flex-col gap-4 h-full">
-              <div className="flex-1 min-h-0">
-                <img
-                  src={fcaLeaderImg}
-                  alt="Delainey Suraju with Fellowship of Christian Athletes team"
-                  className="w-full h-full rounded-lg object-cover shadow-lg"
-                />
-                <p className="text-xs text-muted-foreground mt-2 text-center italic">
+              <div className="flex-1 min-h-0 flex flex-col">
+                <div className="flex-1 min-h-0">
+                  <img
+                    src={fcaLeaderImg}
+                    alt="Delainey Suraju with Fellowship of Christian Athletes team"
+                    className="w-full h-full rounded-lg object-cover shadow-lg"
+                  />
+                </div>
+                <p className="text-xs text-muted-foreground mt-2 text-center italic shrink-0">
                   Fellowship of Christian Athletes — building community through faith and sport
                 </p>
               </div>
-              <div className="flex-1 min-h-0">
-                <img
-                  src={footballTeamImg}
-                  alt="Delainey Suraju #44 running onto the field with St. Thomas Tommies football team"
-                  className="w-full h-full rounded-lg object-cover shadow-lg"
-                />
-                <p className="text-xs text-muted-foreground mt-2 text-center italic">
+              <div className="flex-1 min-h-0 flex flex-col">
+                <div className="flex-1 min-h-0">
+                  <img
+                    src={footballTeamImg}
+                    alt="Delainey Suraju #44 running onto the field with St. Thomas Tommies football team"
+                    className="w-full h-full rounded-lg object-cover shadow-lg"
+                  />
+                </div>
+                <p className="text-xs text-muted-foreground mt-2 text-center italic shrink-0">
                   Game day with the St. Thomas Tommies — #44
                 </p>
               </div>
