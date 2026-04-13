@@ -2,6 +2,9 @@ import { Briefcase, Shield } from "lucide-react";
 import studentAdvocateImg from "@/assets/student-advocate.jpg";
 import fcaLeaderImg from "@/assets/fca-leader.jpg";
 import footballTeamImg from "@/assets/football-team.jpg";
+import clarveyLogo from "@/assets/clarvey-logo.png";
+import insightGlobalLogo from "@/assets/insight-global-logo.jpg";
+import usBankLogo from "@/assets/us-bank-logo.webp";
 
 const experiences = [
   {
