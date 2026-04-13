@@ -13,6 +13,7 @@ const experiences = [
     type: "Entrepreneurship",
     desc: "Built a research-driven marketing brand helping immigrant, women, and underrepresented founders grow beyond their initial communities. Use AI-driven tools and strategic marketing to improve visibility and close systemic gaps in business growth.",
     active: true,
+    logo: clarveyLogo,
   },
   {
     role: "Recruiter / Account Manager",
@@ -21,12 +22,14 @@ const experiences = [
     date: "Jul 2026 – Present",
     type: "Recruiting & Sales",
     desc: "Lead full-cycle recruiting and account management, aligning talent with client needs while driving placements and revenue growth.",
+    logo: insightGlobalLogo,
   },
   {
     role: "Client Relationship Consultant",
     company: "U.S. Bank",
     type: "Banking & Finance",
     desc: "Managed client relationships, delivered financial solutions, and consistently met performance goals in a fast-paced environment.",
+    logo: usBankLogo,
   },
   {
     role: "Wholesaling Associate",
