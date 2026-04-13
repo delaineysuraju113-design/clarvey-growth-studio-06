@@ -117,35 +117,35 @@ const ExperienceSection = () => {
           </ul>
 
           {/* Leadership Photos */}
-          <div className="grid md:grid-cols-2 gap-8 mt-10 ml-12">
+          <div className="grid md:grid-cols-2 gap-6 mt-10 ml-12 md:auto-rows-fr">
             <div>
               <img
                 src={studentAdvocateImg}
                 alt="Delainey Suraju with Minnesota State Representative advocating for higher education policy"
-                className="w-full rounded-lg object-cover shadow-lg aspect-[4/5]"
+                className="w-full h-full rounded-lg object-cover shadow-lg aspect-[3/4]"
               />
               <p className="text-xs text-muted-foreground mt-3 text-center italic">
                 Partnering with a Minnesota State Representative on student affordability policy
               </p>
             </div>
-            <div className="space-y-8">
-              <div>
+            <div className="flex flex-col gap-4 h-full">
+              <div className="flex-1 min-h-0">
                 <img
                   src={fcaLeaderImg}
                   alt="Delainey Suraju with Fellowship of Christian Athletes team"
-                  className="w-full rounded-lg object-cover shadow-lg aspect-[4/3]"
+                  className="w-full h-full rounded-lg object-cover shadow-lg"
                 />
-                <p className="text-xs text-muted-foreground mt-3 text-center italic">
+                <p className="text-xs text-muted-foreground mt-2 text-center italic">
                   Fellowship of Christian Athletes — building community through faith and sport
                 </p>
               </div>
-              <div>
+              <div className="flex-1 min-h-0">
                 <img
                   src={footballTeamImg}
                   alt="Delainey Suraju #44 running onto the field with St. Thomas Tommies football team"
-                  className="w-full rounded-lg object-cover shadow-lg aspect-[4/3]"
+                  className="w-full h-full rounded-lg object-cover shadow-lg"
                 />
-                <p className="text-xs text-muted-foreground mt-3 text-center italic">
+                <p className="text-xs text-muted-foreground mt-2 text-center italic">
                   Game day with the St. Thomas Tommies — #44
                 </p>
               </div>
