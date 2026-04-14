@@ -34,7 +34,7 @@ const AboutSection = () => {
             <img
               src={footballImg}
               alt="Delainey Suraju #44 on the field at University of St. Thomas"
-              className="w-full rounded-lg object-cover shadow-lg aspect-[3/4]"
+              className="w-full rounded-lg object-contain shadow-lg"
             />
           </div>
         </div>
