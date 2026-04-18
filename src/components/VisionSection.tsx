@@ -27,7 +27,7 @@ const VisionSection = () => {
               "Scale research-driven strategies that drive real business growth",
               "Help underrepresented founders grow beyond local markets",
               "Build a portfolio focused on measurable results and impact",
-              "Grow Clarvey into a national, equity-driven consulting brand",
+              "Grow Clarvé into a national, equity-driven consulting brand",
             ].map((tag) => (
               <span
                 key={tag}
