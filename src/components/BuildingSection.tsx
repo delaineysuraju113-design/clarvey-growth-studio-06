@@ -1,5 +1,5 @@
 import { ArrowUpRight, Sparkles } from "lucide-react";
-import clarvéLogo from "@/assets/clarvé-logo.png";
+import clarveLogo from "@/assets/clarve-logo.png";
 
 const BuildingSection = () => {
   return (
@@ -7,7 +7,7 @@ const BuildingSection = () => {
       <div className="section-container">
         <p className="text-xs font-medium tracking-widest uppercase text-accent mb-4">What I'm Building</p>
         <div className="flex items-center gap-4 mb-4">
-          <img src={clarvéLogo} alt="Clarvé logo" className="w-14 h-14 object-contain" />
+          <img src={clarveLogo} alt="Clarvé logo" className="w-14 h-14 object-contain" />
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
             Clarvé
           </h2>
