@@ -2,18 +2,18 @@ import { Briefcase, Shield } from "lucide-react";
 import studentAdvocateImg from "@/assets/student-advocate.jpg";
 import fcaLeaderImg from "@/assets/fca-leader.jpg";
 import footballTeamImg from "@/assets/football-team.jpg";
-import clarveyLogo from "@/assets/clarvey-logo.png";
+import clarveLogo from "@/assets/clarve-logo.png";
 import insightGlobalLogo from "@/assets/insight-global-logo.jpg";
 import usBankLogo from "@/assets/us-bank-logo.webp";
 
 const experiences = [
   {
     role: "Founder",
-    company: "Clarvey",
+    company: "Clarvé",
     type: "Entrepreneurship",
     desc: "Built a research-driven marketing brand helping immigrant, women, and underrepresented founders grow beyond their initial communities. Use AI-driven tools and strategic marketing to improve visibility and close systemic gaps in business growth.",
     active: true,
-    logo: clarveyLogo,
+    logo: clarveLogo,
   },
   {
     role: "Recruiter / Account Manager",

@@ -25,7 +25,7 @@ const AboutSection = () => {
               I carried that mindset into football, earning the opportunity to play at the <span className="text-foreground font-medium">University of St. Thomas</span>. Being a student-athlete taught me consistency, accountability, and how to perform under pressure.
             </p>
             <p>
-              Today, I am focused on building my marketing brand, <span className="text-foreground font-medium">Clarvey</span>, where I apply what I've learned to real businesses—starting with hands-on work helping grow a local grocery store.
+              Today, I am focused on building my marketing brand, <span className="text-foreground font-medium">Clarvé</span>, where I apply what I've learned to real businesses—starting with hands-on work helping grow a local grocery store.
             </p>
           </div>
 
