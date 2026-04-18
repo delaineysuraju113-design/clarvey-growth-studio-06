@@ -6,10 +6,10 @@ const BuildingSection = () => {
     <section id="building" className="section-padding bg-card">
       <div className="section-container">
         <p className="text-xs font-medium tracking-widest uppercase text-accent mb-4">What I'm Building</p>
-        <div className="flex items-center gap-4 mb-4">
+        <div className="flex items-center gap-0 mb-4">
           <img src={clarveLogo} alt="Clarvé logo" className="w-14 h-14 object-contain" />
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
-            Clarvé
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground -ml-1">
+            larvé
           </h2>
         </div>
         <p className="text-muted-foreground max-w-2xl mb-10 leading-relaxed">
