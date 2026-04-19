@@ -19,16 +19,13 @@ const BuildingSection = () => {
         <div className="grid md:grid-cols-2 gap-10 items-start">
           <div className="space-y-6 text-muted-foreground leading-relaxed">
             <p>
-              <span className="text-foreground font-medium">Adom African Market</span> is a family-owned grocery store offering an authentic range of West African products — from goat meat and stockfish to specialty flours, traditional spices, clothing, and cultural goods. Over the years, the store built a loyal customer base through trust and relationships, but its digital presence wasn't reflecting the strength of the business.
+              <span className="text-foreground font-medium">Clarvé</span> is a research-driven marketing agency built for the entrepreneurs America overlooks — immigrant founders, women business owners, and underrepresented communities ready to grow beyond their block.
             </p>
             <p>
-              This project is a full marketing transformation: building a website with SEO-optimized inventory and local delivery, establishing a social media presence, developing brand positioning, and implementing customer acquisition strategies — all designed to reach a wider audience while staying true to the store's cultural identity.
+              These businesses aren't failing. They're being held back. Today, <span className="text-foreground font-medium">97% of consumers</span> search online before ever walking through a door — and businesses without a strong digital presence aren't just missing clicks, they're missing customers entirely.
             </p>
             <p>
-              Adom African Market serves as <span className="text-foreground font-medium">Clarvé's anchor case study</span> — a live demonstration of what's possible when underrepresented businesses get the visibility they've always deserved. Real strategies. Real outcomes. Documented as they happen.
-            </p>
-            <p className="text-sm font-medium text-accent">
-              Live project — ongoing
+              The gap isn't a talent problem. It's a visibility problem. Clarvé exists to close it through research-backed strategy, modern digital presence, and marketing built for founders the mainstream market has long ignored.
             </p>
           </div>
 
