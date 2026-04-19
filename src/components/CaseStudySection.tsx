@@ -28,9 +28,10 @@ const CaseStudySection = () => {
             <p>
               Adom African Market serves as <span className="font-medium opacity-100">Clarvé's anchor case study</span> — a live demonstration of what's possible when underrepresented businesses get the visibility they've always deserved. Real strategies. Real outcomes. Documented as they happen.
             </p>
-            <p className="font-medium opacity-100 text-accent">
+            <span className="inline-flex items-center gap-1.5 text-xs font-medium text-accent">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
               Live project — ongoing
-            </p>
+            </span>
           </div>
 
           <div className="space-y-5">
