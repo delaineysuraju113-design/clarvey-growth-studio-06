@@ -8,6 +8,11 @@ const CaseStudySection = () => {
         <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
           Adom African Market
         </h2>
+        <div className="flex flex-wrap gap-x-6 gap-y-1 mb-8 text-sm opacity-80">
+          <span><span className="opacity-60">Location ·</span> Minnesota, USA</span>
+          <span><span className="opacity-60">Industry ·</span> African Grocery Retail</span>
+          <span><span className="opacity-60">Type ·</span> Family-Owned Business</span>
+        </div>
         <p className="opacity-80 max-w-2xl mb-12 leading-relaxed">
           A real-world business transformation — not a class project. This is where strategy meets execution.
         </p>
@@ -15,13 +20,16 @@ const CaseStudySection = () => {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="space-y-6 leading-relaxed opacity-90">
             <p>
-              Adom African Market is a local family-owned grocery store offering authentic African and Caribbean products. The store has a loyal customer base built over years of trust — but its digital presence doesn't match its potential.
+              Adom African Market is a family-owned grocery store offering an authentic range of West African products — from goat meat and stockfish to specialty flours, traditional spices, clothing, and cultural goods. Over the years, the store built a loyal customer base through trust and relationships, but its digital presence wasn't reflecting the strength of the business.
             </p>
             <p>
-              I'm leading the marketing transformation: building a website, growing social media, implementing customer acquisition strategies, and developing brand positioning that communicates the store's unique value to a wider audience.
+              This project is a full marketing transformation: building a website with SEO-optimized inventory and local delivery, establishing a social media presence, developing brand positioning, and implementing customer acquisition strategies — all designed to reach a wider audience while staying true to the store's cultural identity.
             </p>
-            <p className="font-medium opacity-100">
-              This is a live project — documenting real work, real strategies, and real outcomes as they happen.
+            <p>
+              Adom African Market serves as <span className="font-medium opacity-100">Clarvé's anchor case study</span> — a live demonstration of what's possible when underrepresented businesses get the visibility they've always deserved. Real strategies. Real outcomes. Documented as they happen.
+            </p>
+            <p className="font-medium opacity-100 text-accent">
+              Live project — ongoing
             </p>
           </div>
 
