@@ -9,25 +9,25 @@ const ThinkingSection = () => {
         
         <div className="grid md:grid-cols-2 gap-12">
           <div className="p-8 border border-gray-100 rounded-2xl hover:shadow-lg transition-shadow">
-            <span className="text-4xl font-bold text-primary/20 mb-6 block">01</span>
+            <span className="text-4xl font-bold text-black mb-6 block">1</span>
             <h3 className="text-2xl font-bold mb-4">Dual Heritage</h3>
             <p className="text-gray-600 leading-relaxed">Rooted in 'claro' (clarity) and 'convey' (delivery). Built for those navigating worlds and systems not originally designed for them.</p>
           </div>
-
+          
           <div className="p-8 border border-gray-100 rounded-2xl hover:shadow-lg transition-shadow">
-            <span className="text-4xl font-bold text-primary/20 mb-6 block">02</span>
+            <span className="text-4xl font-bold text-black mb-6 block">2</span>
             <h3 className="text-2xl font-bold mb-4">The Amplified Story</h3>
             <p className="text-gray-600 leading-relaxed">Closing the gap for women and immigrant founders who have faced skepticism or been overlooked. We ensure your story is finally heard.</p>
           </div>
-
+          
           <div className="p-8 border border-gray-100 rounded-2xl hover:shadow-lg transition-shadow">
-            <span className="text-4xl font-bold text-primary/20 mb-6 block">03</span>
+            <span className="text-4xl font-bold text-black mb-6 block">3</span>
             <h3 className="text-2xl font-bold mb-4">Eliminating the Friction</h3>
             <p className="text-gray-600 leading-relaxed">Removing the 'noise' of technical marketing and AI. We handle the gears so you can focus on leading your vision.</p>
           </div>
-
+          
           <div className="p-8 border border-gray-100 rounded-2xl hover:shadow-lg transition-shadow">
-            <span className="text-4xl font-bold text-primary/20 mb-6 block">04</span>
+            <span className="text-4xl font-bold text-black mb-6 block">4</span>
             <h3 className="text-2xl font-bold mb-4">Strategic Silence</h3>
             <p className="text-gray-600 leading-relaxed">Replacing chaos with a clear path. When the marketplace static fades, your brand is the only thing left to see.</p>
           </div>
