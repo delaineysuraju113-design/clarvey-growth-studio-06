@@ -19,7 +19,7 @@ const HeroSection = () => {
 
       <div className="mt-8 flex flex-wrap justify-center gap-4 animate-fade-up" style={{ animationDelay: "0.4s" }}>
         <a
-          href="#about"
+        href="#experience"
           className="inline-flex items-center gap-2 px-8 py-3 rounded-md bg-primary text-primary-foreground text-sm font-semibold tracking-wide hover:opacity-90 transition-opacity"
         >
           Explore My Work
