@@ -84,3 +84,42 @@ const ThinkingSection = () => {
                 style={{ color: '#B8893B' }}
               >
                 {p.number}
+              </span>
+              <h3 className="font-serif text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                {p.title}
+              </h3>
+              <p className="text-gray-500 leading-relaxed text-base md:text-lg">
+                {p.body}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom callout card */}
+        <div
+          className="bg-white rounded-md shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-6 p-8 md:p-10"
+          style={{ borderLeft: '4px solid #B8893B' }}
+        >
+          <div className="flex-1">
+            <p className="font-serif italic text-xl md:text-2xl text-gray-900 mb-3 leading-snug">
+              The Visibility Gap is real — and it's costing underrepresented
+              founders every day they go unseen.
+            </p>
+            <p className="text-gray-500 text-base">
+              Clarvé exists to close it. One story at a time.
+            </p>
+          </div>
+          <a
+            href="#contact"
+            className="inline-flex items-center justify-center px-8 py-4 rounded-md text-white font-medium hover:opacity-90 transition-opacity whitespace-nowrap"
+            style={{ backgroundColor: '#1F2D24' }}
+          >
+            Work Together
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ThinkingSection;
