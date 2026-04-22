@@ -1,6 +1,4 @@
-import studentAdvocateImg from "@/assets/student-advocate.jpg";
-import fcaLeaderImg from "@/assets/fca-leader.jpg";
-import footballTeamImg from "@/assets/football-team.jpg";
+
 import { useState, useEffect, useCallback } from "react";
 import { Briefcase, Shield, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
