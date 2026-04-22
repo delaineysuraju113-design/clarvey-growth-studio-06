@@ -1,4 +1,7 @@
-import { Briefcase, Shield } from "lucide-react";
+import { useState, useEffect, useCallback } from "react";
+import { Briefcase, Shield, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
+
 import studentAdvocateImg from "@/assets/student-advocate.jpg";
 import fcaLeaderImg from "@/assets/fca-leader.jpg";
 import footballTeamImg from "@/assets/football-team.jpg";
@@ -115,30 +118,231 @@ const leadership = [
   </>,
 ];
 
-const leadershipCards = [
+/**
+ * LEADERSHIP CATEGORIES
+ * To add more images to a category, just push more { src, caption } objects
+ * into the `images` array. The first image is used as the card cover.
+ */
+type LightboxImage = { src: string; caption: string };
+type LeadershipCategory = {
+  id: "policy" | "fca" | "football";
+  title: string;
+  alt: string;
+  coverCaption: string;
+  images: LightboxImage[];
+};
+
+const leadershipCategories: LeadershipCategory[] = [
   {
-    img: studentAdvocateImg,
-    alt: "Delainey Suraju with Minnesota State Representative advocating for higher education policy",
+    id: "policy",
     title: "Higher Education Policy",
-    caption:
+    alt: "Delainey Suraju with Minnesota State Representative advocating for higher education policy",
+    coverCaption:
       "Partnering with a Minnesota State Representative on student affordability policy.",
+    images: [
+      {
+        src: studentAdvocateImg,
+        caption:
+          "Partnering with a Minnesota State Representative on student affordability policy.",
+      },
+      // Add more policy images here:
+      // { src: policyImg2, caption: "Testifying at the State Capitol." },
+    ],
   },
   {
-    img: fcaLeaderImg,
-    alt: "Delainey Suraju with Fellowship of Christian Athletes team",
+    id: "fca",
     title: "FCA Leader",
-    caption:
+    alt: "Delainey Suraju with Fellowship of Christian Athletes team",
+    coverCaption:
       "Fellowship of Christian Athletes — building community through faith and sport.",
+    images: [
+      {
+        src: fcaLeaderImg,
+        caption:
+          "Fellowship of Christian Athletes — building community through faith and sport.",
+      },
+      // Add more FCA images here:
+      // { src: fcaImg2, caption: "Weekly huddle on campus." },
+    ],
   },
   {
-    img: footballTeamImg,
-    alt: "Delainey Suraju #44 running onto the field with St. Thomas Tommies football team",
+    id: "football",
     title: "Football",
-    caption: "Game day with the St. Thomas Tommies — #44.",
+    alt: "Delainey Suraju #44 running onto the field with St. Thomas Tommies football team",
+    coverCaption: "Game day with the St. Thomas Tommies — #44.",
+    images: [
+      {
+        src: footballTeamImg,
+        caption: "Game day with the St. Thomas Tommies — #44.",
+      },
+      // Add more football images here:
+      // { src: footballImg2, caption: "Pregame warmups." },
+    ],
   },
 ];
 
+/* ------------------------------------------------------------------ */
+/*  LIGHTBOX COMPONENT                                                */
+/* ------------------------------------------------------------------ */
+
+type LightboxProps = {
+  category: LeadershipCategory | null;
+  startIndex: number;
+  onClose: () => void;
+};
+
+const Lightbox = ({ category, startIndex, onClose }: LightboxProps) => {
+  const [index, setIndex] = useState(startIndex);
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+
+  useEffect(() => setIndex(startIndex), [startIndex, category]);
+
+  const total = category?.images.length ?? 0;
+
+  const goPrev = useCallback(
+    () => setIndex((i) => (i - 1 + total) % total),
+    [total]
+  );
+  const goNext = useCallback(
+    () => setIndex((i) => (i + 1) % total),
+    [total]
+  );
+
+  // Keyboard navigation + lock body scroll while open
+  useEffect(() => {
+    if (!category) return;
+
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+      if (e.key === "ArrowRight") goNext();
+      if (e.key === "ArrowLeft") goPrev();
+    };
+    window.addEventListener("keydown", handleKey);
+
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      window.removeEventListener("keydown", handleKey);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [category, onClose, goNext, goPrev]);
+
+  // Touch swipe (mobile)
+  const handleTouchStart = (e: React.TouchEvent) =>
+    setTouchStartX(e.touches[0].clientX);
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX === null) return;
+    const diff = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(diff) > 50) {
+      if (diff < 0) goNext();
+      else goPrev();
+    }
+    setTouchStartX(null);
+  };
+
+  return (
+    <AnimatePresence>
+      {category && (
+        <motion.div
+          key="lightbox-backdrop"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.25 }}
+          onClick={onClose}
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${category.title} gallery`}
+        >
+          {/* Close button */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              onClose();
+            }}
+            aria-label="Close gallery"
+            className="absolute top-4 right-4 md:top-6 md:right-6 z-10 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors"
+          >
+            <X size={20} />
+          </button>
+
+          {/* Counter */}
+          <div className="absolute top-4 left-4 md:top-6 md:left-6 z-10 px-3 py-1 rounded-full bg-white/10 text-white text-xs md:text-sm font-medium">
+            {index + 1} of {total}
+          </div>
+
+          {/* Previous arrow */}
+          {total > 1 && (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                goPrev();
+              }}
+              aria-label="Previous image"
+              className="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 z-10 w-11 h-11 md:w-12 md:h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors"
+            >
+              <ChevronLeft size={24} />
+            </button>
+          )}
+
+          {/* Next arrow */}
+          {total > 1 && (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                goNext();
+              }}
+              aria-label="Next image"
+              className="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 z-10 w-11 h-11 md:w-12 md:h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors"
+            >
+              <ChevronRight size={24} />
+            </button>
+          )}
+
+          {/* Image + caption (stopping propagation so clicks on it don't close) */}
+          <motion.div
+            key={`lightbox-image-${index}`}
+            className="relative max-w-[92vw] max-h-[85vh] flex flex-col items-center"
+            initial={{ opacity: 0, scale: 0.96 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.96 }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            onClick={(e) => e.stopPropagation()}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+          >
+            <img
+              src={category.images[index].src}
+              alt={category.images[index].caption}
+              className="max-h-[75vh] max-w-[92vw] object-contain rounded-lg shadow-2xl"
+            />
+            <p className="mt-4 text-center text-white/90 text-sm md:text-base max-w-2xl px-4 italic">
+              {category.images[index].caption}
+            </p>
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+};
+
+/* ------------------------------------------------------------------ */
+/*  MAIN SECTION                                                       */
+/* ------------------------------------------------------------------ */
+
 const ExperienceSection = () => {
+  const [activeCategory, setActiveCategory] =
+    useState<LeadershipCategory | null>(null);
+  const [startIndex, setStartIndex] = useState(0);
+
+  const openLightbox = (category: LeadershipCategory, i = 0) => {
+    setActiveCategory(category);
+    setStartIndex(i);
+  };
+  const closeLightbox = () => setActiveCategory(null);
+
   return (
     <section id="experience" className="section-padding">
       <div className="section-container">
@@ -158,7 +362,6 @@ const ExperienceSection = () => {
                 i !== experiences.length - 1 ? "border-b border-border" : "border-b border-border"
               }`}
             >
-              {/* Left */}
               <div className="md:w-72 shrink-0 flex items-start gap-3">
                 <div className="mt-0.5 w-12 h-12 rounded-lg bg-card border border-border flex items-center justify-center shrink-0 overflow-hidden">
                   {exp.logo ? (
@@ -194,7 +397,6 @@ const ExperienceSection = () => {
                 </div>
               </div>
 
-              {/* Right */}
               <div className="flex-1">
                 <p className="text-sm text-muted-foreground leading-relaxed">{exp.desc}</p>
               </div>
@@ -220,37 +422,49 @@ const ExperienceSection = () => {
             ))}
           </ul>
 
-          {/* Interactive Image Cards */}
+          {/* Interactive Image Cards → Lightbox triggers */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 ml-0 md:ml-12">
-            {leadershipCards.map((card) => (
-              <div
-                key={card.title}
-                className="group relative overflow-hidden rounded-[12px] shadow-lg hover:shadow-2xl transition-shadow duration-300 aspect-[3/4] cursor-pointer"
-              >
-                {/* Image */}
-                <img
-                  src={card.img}
-                  alt={card.alt}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-105"
-                />
-
-                {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent transition-opacity duration-300 group-hover:from-black/90" />
-
-                {/* Caption */}
-                <div className="absolute inset-x-0 bottom-0 p-5 transform transition-transform duration-300 ease-out group-hover:-translate-y-1">
-                  <h4 className="text-white text-base font-heading font-semibold mb-1 drop-shadow">
-                    {card.title}
-                  </h4>
-                  <p className="text-white/90 text-xs leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-                    {card.caption}
-                  </p>
-                </div>
-              </div>
-            ))}
+            {leadershipCategories.map((cat) => {
+              const cover = cat.images[0];
+              return (
+                <button
+                  key={cat.id}
+                  onClick={() => openLightbox(cat, 0)}
+                  aria-label={`Open ${cat.title} gallery`}
+                  className="group relative overflow-hidden rounded-[12px] shadow-lg hover:shadow-2xl transition-shadow duration-300 aspect-[3/4] text-left focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background"
+                >
+                  <img
+                    src={cover.src}
+                    alt={cat.alt}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent transition-opacity duration-300 group-hover:from-black/90" />
+                  <div className="absolute inset-x-0 bottom-0 p-5 transform transition-transform duration-300 ease-out group-hover:-translate-y-1">
+                    <h4 className="text-white text-base font-heading font-semibold mb-1 drop-shadow">
+                      {cat.title}
+                    </h4>
+                    <p className="text-white/90 text-xs leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                      {cat.coverCaption}
+                    </p>
+                    {cat.images.length > 1 && (
+                      <span className="inline-block mt-2 text-[10px] font-medium tracking-widest uppercase text-white/70">
+                        {cat.images.length} photos
+                      </span>
+                    )}
+                  </div>
+                </button>
+              );
+            })}
           </div>
         </div>
       </div>
+
+      {/* Lightbox overlay */}
+      <Lightbox
+        category={activeCategory}
+        startIndex={startIndex}
+        onClose={closeLightbox}
+      />
     </section>
   );
 };
