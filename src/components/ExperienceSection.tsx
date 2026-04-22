@@ -189,4 +189,56 @@ const ExperienceSection = () => {
           </div>
           <ul className="space-y-6 ml-12">
             {leadership.map((item, i) => (
-              <li key={i} className="flex
+              <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground leading-relaxed">
+                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+
+          {/* Leadership Photos */}
+          <div className="grid md:grid-cols-2 gap-6 mt-10 ml-12 md:auto-rows-fr">
+            <div>
+              <img
+                src={studentAdvocateImg}
+                alt="Delainey Suraju with Minnesota State Representative advocating for higher education policy"
+                className="w-full h-full rounded-lg object-cover shadow-lg aspect-[3/4]"
+              />
+              <p className="text-xs text-muted-foreground mt-3 text-center italic">
+                Partnering with a Minnesota State Representative on student affordability policy
+              </p>
+            </div>
+            <div className="flex flex-col gap-4 h-full">
+              <div className="flex-1 min-h-0 flex flex-col">
+                <div className="flex-1 min-h-0">
+                  <img
+                    src={fcaLeaderImg}
+                    alt="Delainey Suraju with Fellowship of Christian Athletes team"
+                    className="w-full h-full rounded-lg object-cover shadow-lg"
+                  />
+                </div>
+                <p className="text-xs text-muted-foreground mt-2 text-center italic shrink-0">
+                  Fellowship of Christian Athletes — building community through faith and sport
+                </p>
+              </div>
+              <div className="flex-1 min-h-0 flex flex-col">
+                <div className="flex-1 min-h-0">
+                  <img
+                    src={footballTeamImg}
+                    alt="Delainey Suraju #44 running onto the field with St. Thomas Tommies football team"
+                    className="w-full h-full rounded-lg object-cover shadow-lg"
+                  />
+                </div>
+                <p className="text-xs text-muted-foreground mt-2 text-center italic shrink-0">
+                  Game day with the St. Thomas Tommies — #44
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ExperienceSection;
