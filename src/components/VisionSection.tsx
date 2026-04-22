@@ -5,29 +5,44 @@ const VisionSection = () => {
     <section id="vision" className="section-padding bg-card">
       <div className="section-container">
         <div className="max-w-3xl">
-          <p className="text-xs font-medium tracking-widest uppercase text-accent mb-4">Future Vision</p>
+          <p className="text-xs font-medium tracking-widest uppercase text-accent mb-4">
+            Future Vision
+          </p>
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">
             Where I'm Going
           </h2>
 
           <div className="space-y-6 text-muted-foreground leading-relaxed">
             <p>
-              My long-term goal is to become a high-level <span className="text-foreground font-medium">business consultant and strategist</span> — someone who doesn't just advise, but builds alongside the companies they work with.
+              My long-term goal is to become a{" "}
+              <span className="text-foreground font-medium">
+                high-level business consultant and strategist
+              </span>{" "}
+              — a man continuously growing and applying his skills to benefit
+              himself, the people he cares about, and future generations to come.
             </p>
             <p>
-              I want to build and scale businesses, develop deep expertise in marketing and operations, and work with companies to solve their toughest growth challenges. Eventually, I want to operate or advise multiple businesses — creating systems that drive measurable outcomes.
+              I want to excel and grow tremendously at{" "}
+              <span className="text-foreground font-medium">Insight Global</span>{" "}
+              — learning from the best, sharpening my client relationship skills,
+              deepening my communication, and building real trust within
+              companies and organizations. Pushing past my limits, facing fears
+              head-on, getting out of my comfort zone, and becoming a better
+              leader every day.
             </p>
             <p>
-              Every experience I've had — from the football field to cold calling to running my own agency — has been building toward this. I'm not waiting for the opportunity. I'm creating it.
+              Every experience I've had — from the football field to cold calling
+              to running my own agency — has been building toward this. I'm not
+              waiting for the opportunity. I'm creating it.
             </p>
           </div>
 
           <div className="mt-10 flex flex-wrap gap-4">
             {[
-              "Scale research-driven strategies that drive real business growth",
-              "Help underrepresented founders grow beyond local markets",
-              "Build a portfolio focused on measurable results and impact",
-              "Grow Clarvé into a national, equity-driven consulting brand",
+              "Grow at Insight Global by learning from the best and building deep client trust",
+              "Push past comfort zones to become a stronger leader and communicator",
+              "Develop deep expertise in marketing, operations, and emerging AI tools",
+              "Grow Clarvé into a brand that makes a lasting impact in communities",
             ].map((tag) => (
               <span
                 key={tag}
