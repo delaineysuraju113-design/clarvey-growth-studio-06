@@ -7,7 +7,7 @@ import studentAdvocateImg from "@/assets/student-advocate.jpg";
 import policyPhoto1 from "@/assets/IMG_1422.jpeg";
    import policyPhoto2 from "@/assets/FullSizeRender.jpeg";
 import fcaLeaderImg from "@/assets/fca-leader.jpg";
-import photoA from "@/assets/photot A";
+   import photoA from "@/assets/photot A";
 import footballTeamImg from "@/assets/football-team.jpg";
 import clarveLogo from "@/assets/clarve-logo.png";
 import insightGlobalLogo from "@/assets/insight-global-logo.jpg";
