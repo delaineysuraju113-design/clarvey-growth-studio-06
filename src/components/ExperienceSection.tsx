@@ -1,8 +1,13 @@
+import studentAdvocateImg from "@/assets/student-advocate.jpg";
+import fcaLeaderImg from "@/assets/fca-leader.jpg";
+import footballTeamImg from "@/assets/football-team.jpg";
 import { useState, useEffect, useCallback } from "react";
 import { Briefcase, Shield, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 
 import studentAdvocateImg from "@/assets/student-advocate.jpg";
+import policyPhoto1 from "@/assets/IMG_1422.jpeg";
+   import policyPhoto2 from "@/assets/FullSizeRender.jpeg";
 import fcaLeaderImg from "@/assets/fca-leader.jpg";
 import footballTeamImg from "@/assets/football-team.jpg";
 import clarveLogo from "@/assets/clarve-logo.png";
@@ -134,21 +139,29 @@ type LeadershipCategory = {
 
 const leadershipCategories: LeadershipCategory[] = [
   {
-    id: "policy",
-    title: "Higher Education Policy",
-    alt: "Delainey Suraju with Minnesota State Representative advocating for higher education policy",
-    coverCaption:
-      "Partnering with a Minnesota State Representative on student affordability policy.",
-    images: [
-      {
-        src: studentAdvocateImg,
-        caption:
-          "Partnering with a Minnesota State Representative on student affordability policy.",
-      },
-      // Add more policy images here:
-      // { src: policyImg2, caption: "Testifying at the State Capitol." },
-    ],
-  },
+  id: "policy",
+  title: "Higher Education Policy",
+  alt: "Delainey Suraju with Minnesota State Representative advocating for higher education policy",
+  coverCaption:
+    "Partnering with a Minnesota State Representative on student affordability policy.",
+  images: [
+    {
+      src: studentAdvocateImg,
+      caption:
+        "Partnering with a Minnesota State Representative on student affordability policy.",
+    },
+    {
+      src: policyPhoto1,
+      caption:
+        "Meeting with a St. Thomas representative to discuss student affordability and State Grant reform.",
+    },
+    {
+      src: policyPhoto2,
+      caption:
+        "At the Minnesota State Capitol with fellow student advocates pushing for higher education policy change.",
+    },
+  ],
+},
   {
     id: "fca",
     title: "FCA Leader",
