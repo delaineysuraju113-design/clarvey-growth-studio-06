@@ -115,6 +115,29 @@ const leadership = [
   </>,
 ];
 
+const leadershipCards = [
+  {
+    img: studentAdvocateImg,
+    alt: "Delainey Suraju with Minnesota State Representative advocating for higher education policy",
+    title: "Higher Education Policy",
+    caption:
+      "Partnering with a Minnesota State Representative on student affordability policy.",
+  },
+  {
+    img: fcaLeaderImg,
+    alt: "Delainey Suraju with Fellowship of Christian Athletes team",
+    title: "FCA Leader",
+    caption:
+      "Fellowship of Christian Athletes — building community through faith and sport.",
+  },
+  {
+    img: footballTeamImg,
+    alt: "Delainey Suraju #44 running onto the field with St. Thomas Tommies football team",
+    title: "Football",
+    caption: "Game day with the St. Thomas Tommies — #44.",
+  },
+];
+
 const ExperienceSection = () => {
   return (
     <section id="experience" className="section-padding">
@@ -187,6 +210,7 @@ const ExperienceSection = () => {
             </div>
             <h3 className="text-2xl font-heading font-bold text-foreground">Leadership</h3>
           </div>
+
           <ul className="space-y-6 ml-12">
             {leadership.map((item, i) => (
               <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground leading-relaxed">
@@ -196,44 +220,34 @@ const ExperienceSection = () => {
             ))}
           </ul>
 
-          {/* Leadership Photos */}
-          <div className="grid md:grid-cols-2 gap-6 mt-10 ml-12 md:auto-rows-fr">
-            <div>
-              <img
-                src={studentAdvocateImg}
-                alt="Delainey Suraju with Minnesota State Representative advocating for higher education policy"
-                className="w-full h-full rounded-lg object-cover shadow-lg aspect-[3/4]"
-              />
-              <p className="text-xs text-muted-foreground mt-3 text-center italic">
-                Partnering with a Minnesota State Representative on student affordability policy
-              </p>
-            </div>
-            <div className="flex flex-col gap-4 h-full">
-              <div className="flex-1 min-h-0 flex flex-col">
-                <div className="flex-1 min-h-0">
-                  <img
-                    src={fcaLeaderImg}
-                    alt="Delainey Suraju with Fellowship of Christian Athletes team"
-                    className="w-full h-full rounded-lg object-cover shadow-lg"
-                  />
+          {/* Interactive Image Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 ml-0 md:ml-12">
+            {leadershipCards.map((card) => (
+              <div
+                key={card.title}
+                className="group relative overflow-hidden rounded-[12px] shadow-lg hover:shadow-2xl transition-shadow duration-300 aspect-[3/4] cursor-pointer"
+              >
+                {/* Image */}
+                <img
+                  src={card.img}
+                  alt={card.alt}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-105"
+                />
+
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent transition-opacity duration-300 group-hover:from-black/90" />
+
+                {/* Caption */}
+                <div className="absolute inset-x-0 bottom-0 p-5 transform transition-transform duration-300 ease-out group-hover:-translate-y-1">
+                  <h4 className="text-white text-base font-heading font-semibold mb-1 drop-shadow">
+                    {card.title}
+                  </h4>
+                  <p className="text-white/90 text-xs leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                    {card.caption}
+                  </p>
                 </div>
-                <p className="text-xs text-muted-foreground mt-2 text-center italic shrink-0">
-                  Fellowship of Christian Athletes — building community through faith and sport
-                </p>
               </div>
-              <div className="flex-1 min-h-0 flex flex-col">
-                <div className="flex-1 min-h-0">
-                  <img
-                    src={footballTeamImg}
-                    alt="Delainey Suraju #44 running onto the field with St. Thomas Tommies football team"
-                    className="w-full h-full rounded-lg object-cover shadow-lg"
-                  />
-                </div>
-                <p className="text-xs text-muted-foreground mt-2 text-center italic shrink-0">
-                  Game day with the St. Thomas Tommies — #44
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
