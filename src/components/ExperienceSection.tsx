@@ -21,7 +21,7 @@ const experiences = [
     location: "Minneapolis, MN",
     date: "Jul 2026 – Present",
     type: "Recruiting & Sales",
-    desc: "Lead full-cycle recruiting and account management, aligning talent with client needs while driving placements and revenue growth.",
+    desc: "will be Leading full-cycle recruiting and account management, aligning talent with client needs while driving placements and revenue growth.",
     logo: insightGlobalLogo,
   },
   {
