@@ -418,9 +418,9 @@ const ExperienceSection = () => {
         <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
           Where I've Earned My Skills
         </h2>
-        <p className="text-muted-foreground max-w-2xl mb-12 leading-relaxed">
-          Every role I've taken has been intentional — each one building on the last.
-        </p>
+       <p className="text-foreground/80 max-w-2xl mb-12 leading-relaxed text-base">
+  Every role I've taken has been intentional — each one building on the last.
+</p>
 
         <div className="space-y-0">
           {experiences.map((exp, i) => (
@@ -461,7 +461,7 @@ const ExperienceSection = () => {
                     <span className="text-xs text-muted-foreground self-center ml-auto">{exp.date}</span>
                   )}
                 </div>
-                <div className="text-muted-foreground text-sm leading-relaxed">{exp.desc}</div>
+<div className="text-foreground/80 text-sm leading-relaxed">{exp.desc}</div>
               </div>
             </div>
           ))}
@@ -478,7 +478,7 @@ const ExperienceSection = () => {
 
           <ul className="space-y-6 ml-12">
             {leadership.map((item, i) => (
-              <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground leading-relaxed">
+<li key={i} className="flex items-start gap-3 text-sm text-foreground/80 leading-relaxed">
                 <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
                 <span>{item}</span>
               </li>
