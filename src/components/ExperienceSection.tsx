@@ -358,7 +358,54 @@ const Lightbox = ({ category, startIndex, onClose }: LightboxProps) => {
 /* ------------------------------------------------------------------ */
 /*  MAIN SECTION                                                       */
 /* ------------------------------------------------------------------ */
+const AutoSliderCard = ({ cat, openLightbox }: { cat: any; openLightbox: any }) => {
+  const [index, setIndex] = useState(0);
 
+  useEffect(() => {
+    if (cat.images.length <= 1) return;
+    
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % cat.images.length);
+    }, 4000); // Changes every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [cat.images.length]);
+
+  return (
+    <button
+      onClick={() => openLightbox(cat, index)}
+      className="group relative overflow-hidden rounded-[12px] shadow-lg aspect-[3/4] text-left"
+    >
+      <AnimatePresence mode="wait">
+        <motion.img
+          key={`${cat.id}-${index}`}
+          src={cat.images[index].src}
+          alt={cat.alt}
+          initial={{ opacity: 0, scale: 1.1 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1.2, ease: "easeInOut" }}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      </AnimatePresence>
+      
+      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
+      
+      <div className="absolute inset-x-0 bottom-0 p-5 z-10">
+        <h4 className="text-white text-base font-heading font-semibold mb-1">{cat.title}</h4>
+        <p className="text-white/90 text-xs leading-relaxed opacity-90">{cat.coverCaption}</p>
+        <div className="flex gap-1 mt-3">
+          {cat.images.map((_: any, i: number) => (
+            <div 
+              key={i} 
+              className={`h-1 rounded-full transition-all duration-500 ${i === index ? "w-4 bg-accent" : "w-1 bg-white/30"}`} 
+            />
+          ))}
+        </div>
+      </div>
+    </button>
+  );
+};
 const ExperienceSection = () => {
   const [activeCategory, setActiveCategory] =
     useState<LeadershipCategory | null>(null);
@@ -451,14 +498,11 @@ const ExperienceSection = () => {
 
           {/* Interactive Image Cards → Lightbox triggers */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 ml-0 md:ml-12">
-            {leadershipCategories.map((cat) => {
-              const cover = cat.images[0];
-              return (
-                <button
-                  key={cat.id}
-                  onClick={() => openLightbox(cat, 0)}
-                  aria-label={`Open ${cat.title} gallery`}
-                  className="group relative overflow-hidden rounded-[12px] shadow-lg hover:shadow-2xl transition-shadow duration-300 aspect-[3/4] text-left focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background"
+           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 ml-0 md:ml-12">
+  {leadershipCategories.map((cat) => (
+    <AutoSliderCard key={cat.id} cat={cat} openLightbox={openLightbox} />
+  ))}
+</div>
                 >
                   <img
                     src={cover.src}
