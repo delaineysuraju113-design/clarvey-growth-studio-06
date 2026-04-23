@@ -18,7 +18,7 @@ const principles = [
     body: (
       <>
         Closing the gap for{' '}
-        <strong className="font-semibold text-foreground">
+        <strong className="text-black font-extrabold">
           women and immigrant founders
         </strong>{' '}
         who have faced skepticism or been overlooked. We ensure your story is
@@ -63,9 +63,8 @@ const ThinkingSection = () => {
         </h2>
 
         {/* Subhead */}
-        <p className="text-lg text-muted-foreground mb-20 max-w-2xl">
-          These aren't just principles I believe in — they're how I operate
-          every day.
+        <p className="text-lg text-gray-800 mb-20 max-w-2xl">
+          These aren't just principles I believe in — they're how I operate every day.
         </p>
 
         {/* Grid */}
@@ -73,19 +72,15 @@ const ThinkingSection = () => {
           {principles.map((p) => (
             <div
               key={p.number}
-              className="group p-6 rounded-xl transition-all duration-300 ease-out
-                         hover:-translate-y-1 hover:shadow-xl hover:bg-card cursor-default"
+              className="group p-6 rounded-xl transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl hover:bg-card cursor-default"
             >
-              <span
-                className="block text-2xl md:text-3xl font-semibold text-accent mb-4
-                           transition-transform duration-300 group-hover:-translate-y-0.5"
-              >
+              <span className="block text-2xl md:text-3xl font-semibold text-accent mb-4 transition-transform duration-300 group-hover:-translate-y-0.5">
                 {p.number}
               </span>
               <h3 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-5">
                 {p.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
+              <p className="text-gray-800 leading-relaxed text-base md:text-lg">
                 {p.body}
               </p>
             </div>
@@ -93,16 +88,12 @@ const ThinkingSection = () => {
         </div>
 
         {/* Bottom callout card */}
-        <div
-          className="bg-card rounded-md shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-6 p-8 md:p-10
-                     border-l-4 border-accent transition-all duration-300 hover:shadow-lg"
-        >
+        <div className="bg-card rounded-md shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-6 p-8 md:p-10 border-l-4 border-accent transition-all duration-300 hover:shadow-lg">
           <div className="flex-1">
-            <p className="font-heading italic text-xl md:text-2xl text-foreground mb-3 leading-snug">
-              The Visibility Gap is real — and it's costing underrepresented
-              founders every day they go unseen.
+            <p className="font-heading italic text-xl md:text-2xl text-black font-semibold mb-3 leading-snug">
+              The Visibility Gap is real — and it's costing underrepresented founders every day they go unseen.
             </p>
-            <p className="text-muted-foreground text-base">
+            <p className="text-gray-800 text-base">
               Clarvé exists to close it. One story at a time.
             </p>
           </div>
