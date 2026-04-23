@@ -141,73 +141,66 @@ type LeadershipCategory = {
 
 const leadershipCategories: LeadershipCategory[] = [
   {
-  id: "policy",
-  title: "Higher Education Policy",
-  alt: "Delainey Suraju with Minnesota State Representative advocating for higher education policy",
-  coverCaption:
-    "Partnering with a Minnesota State Representative on student affordability policy.",
-  images: [
-    {
-      src: studentAdvocateImg,
-      caption:
-        "Partnering with a Minnesota State Representative on student affordability policy.",
-    },
-    {
-      src: policyPhoto1,
-      caption:
-        "Meeting with a St. Thomas representative to discuss student affordability and State Grant reform.",
-    },
-    {
-      src: policyPhoto2,
-      caption:
-        "At the Minnesota State Capitol with fellow student advocates pushing for higher education policy change.",
-    },
-  ],
-},
-{
-  id: "fca",
-  title: "FCA Leader",
-  alt: "Delainey Suraju with Fellowship of Christian Athletes team",
-  coverCaption:
-    "Fellowship of Christian Athletes — building community through faith and sport.",
-  images: [
-    {
-      src: fcaLeaderImg,
-      caption:
-        "Fellowship of Christian Athletes — building community through faith and sport.",
-    },
-    {
-      src: fcaTableImg,
-      caption:
-        "Brothers in faith and sport — FCA community night with the UTC crew.",
-    },
-    {
-      src: fcaGroupImg,
-      caption:
-        "Summer internship with Ultimate Training Camp (UTC) — helping college athletes grow in their walk with Christ.",
-    },
-    {
-      src: fcaSpeakingImg,
-      caption:
-        "Sharing testimony at a joint FCA and Athletes in Action gathering in the Twin Cities.",
-    },
-  ],
-},
-{
-  id: "D1 Student-Athlete Experience",
-  title: "D1 Student-Athlete Experience",
-  // ... other properties
-  images: [
-    {
-      src: footballImg1,
-      caption: "Game day with the St. Thomas Tommies — #44.",
-    },
-    {
-      src: footballImg2,
-      caption: "St. Thomas Football: Pre-game at NDSU.",
-    },
-  ],
-},
+    id: "policy",
+    title: "Higher Education Policy",
+    alt: "Delainey Suraju with Minnesota State Representative advocating for higher education policy",
+    coverCaption: "Partnering with a Minnesota State Representative on student affordability policy.",
+    images: [
+      {
+        src: studentAdvocateImg,
+        caption: "Partnering with a Minnesota State Representative on student affordability policy.",
+      },
+      {
+        src: policyPhoto1,
+        caption: "Meeting with a St. Thomas representative to discuss student affordability and State Grant reform.",
+      },
+      {
+        src: policyPhoto2,
+        caption: "At the Minnesota State Capitol with fellow student advocates pushing for higher education policy change.",
+      },
+    ],
+  },
+  {
+    id: "fca",
+    title: "FCA Leader",
+    alt: "Delainey Suraju with Fellowship of Christian Athletes team",
+    coverCaption: "Fellowship of Christian Athletes — building community through faith and sport.",
+    images: [
+      {
+        src: fcaLeaderImg,
+        caption: "Fellowship of Christian Athletes — building community through faith and sport.",
+      },
+      {
+        src: fcaTableImg,
+        caption: "Brothers in faith and sport — FCA community night with the UTC crew.",
+      },
+      {
+        src: fcaGroupImg,
+        caption: "Summer internship with Ultimate Training Camp (UTC) — helping college athletes grow in their walk with Christ.",
+      },
+      {
+        src: fcaSpeakingImg,
+        caption: "Sharing testimony at a joint FCA and Athletes in Action gathering in the Twin Cities.",
+      },
+    ],
+  },
+  {
+    id: "football",
+    title: "D1 Student-Athlete Experience",
+    alt: "Delainey Suraju #44 running onto the field",
+    coverCaption: "Game day with the St. Thomas Tommies — #44.",
+    images: [
+      {
+        src: footballImg1,
+        caption: "Game day with the St. Thomas Tommies — #44.",
+      },
+      {
+        src: footballImg2,
+        caption: "St. Thomas Football: Pre-game at NDSU.",
+      },
+    ],
+  },
+];
       // { src: footballImg2, caption: "Pregame warmups." },
     ],
   },
