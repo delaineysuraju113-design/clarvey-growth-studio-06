@@ -11,6 +11,7 @@ import fcaTableImg from "@/assets/DSC03740_Original.jpeg";
 import fcaGroupImg from "@/assets/IMG_1380_Original.jpeg";
 import fcaSpeakingImg from "@/assets/IMG_5375.jpeg";
 import footballTeamImg from "@/assets/football-team.jpg";
+import footballTeamImg from "@/assets/IMG_7555.jpeg";
 import clarveLogo from "@/assets/clarve-logo.png";
 import insightGlobalLogo from "@/assets/insight-global-logo.jpg";
 import usBankLogo from "@/assets/us-bank-logo.webp";
@@ -202,7 +203,11 @@ const leadershipCategories: LeadershipCategory[] = [
         src: footballTeamImg,
         caption: "Game day with the St. Thomas Tommies — #44.",
       },
-      // Add more football images here:
+      {
+      src: footballTeamImg,
+      caption:
+        "St. Thomas Football: Pre-game at NDSU.",
+    },
       // { src: footballImg2, caption: "Pregame warmups." },
     ],
   },
