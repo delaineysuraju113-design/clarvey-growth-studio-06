@@ -487,7 +487,7 @@ const ExperienceSection = () => {
 
         {/* Interactive Image Cards -> Auto Slider */}
         <div className="mt-12 ml-0 md:ml-12">
-         <h4 className="text-sm font-semibold tracking-widest uppercase text-muted-foreground mb-6 text-center">
+         <h4 className="text-sm font-bold tracking-widest uppercase text-black mb-6 text-center">
   Beyond the Resume
 </h4>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
