@@ -201,10 +201,6 @@ const leadershipCategories: LeadershipCategory[] = [
     ],
   },
 ];
-      // { src: footballImg2, caption: "Pregame warmups." },
-    ],
-  },
-];
 
 /* ------------------------------------------------------------------ */
 /*  LIGHTBOX COMPONENT                                                */
