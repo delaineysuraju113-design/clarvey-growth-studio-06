@@ -7,9 +7,9 @@ import studentAdvocateImg from "@/assets/student-advocate.jpg";
 import policyPhoto1 from "@/assets/IMG_1422.jpeg";
    import policyPhoto2 from "@/assets/FullSizeRender.jpeg";
 import fcaLeaderImg from "@/assets/fca-leader.jpg";
-import fcaGroupImg from "@/assets/fca-group.jpeg";
-import fcaTableImg from "@/assets/fca-table.jpeg";
-import fcaSpeakingImg from "@/assets/fca-speaking.jpeg";
+import fcaGroupImg from "@/assets/IMG_1380_Original.jpeg";
+import fcaTableImg from "@/assets/DSC03740_Original.jpeg";
+import fcaSpeakingImg from "@/assets/IMG_5375.jpeg";
 import footballTeamImg from "@/assets/football-team.jpg";
 import clarveLogo from "@/assets/clarve-logo.png";
 import insightGlobalLogo from "@/assets/insight-global-logo.jpg";
@@ -183,7 +183,7 @@ const leadershipCategories: LeadershipCategory[] = [
     {
       src: fcaTableImg,
       caption:
-        "Late-night FCA huddle on campus — pouring into each other through Scripture and stories.",
+        "Summer internship with Ultimate Training Camp (UTC) — helping college athletes grow in their walk with Christ.",
     },
     {
       src: fcaSpeakingImg,
