@@ -485,21 +485,26 @@ const ExperienceSection = () => {
             ))}
           </ul>
 
-         {/* Interactive Image Cards -> Auto Slider */}
-<div className="mt-12 ml-0 md:ml-12">
-  <h4 className="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-4">
-    Beyond the Resume
-  </h4>
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-    {leadershipCategories.map((cat) => (
-      <AutoSliderCard key={cat.id} cat={cat} openLightbox={openLightbox} />
-    ))}
-  </div>
-</div>
+        {/* Interactive Image Cards -> Auto Slider */}
+        <div className="mt-12 ml-0 md:ml-12">
+          <h4 className="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-4">
+            Beyond the Resume
+          </h4>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {leadershipCategories.map((cat) => (
+              <AutoSliderCard key={cat.id} cat={cat} openLightbox={openLightbox} />
+            ))}
+          </div>
+        </div>
+      </div> {/* <-- This puts the first missing div back */}
+
+      </div> {/* <-- This puts the second missing div back */}
+
       {/* Lightbox overlay */}
       <Lightbox category={activeCategory} startIndex={startIndex} onClose={closeLightbox} />
     </section>
   );
 };
 
+export default ExperienceSection;
 export default ExperienceSection;
