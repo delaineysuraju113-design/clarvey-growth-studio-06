@@ -449,31 +449,12 @@ const ExperienceSection = () => {
                   )}
                 </div>
                 <div>
-                  <h3 className="text-base font-semibold text-foreground">{exp.role}</h3>
-                  <p className="text-sm text-primary font-medium">{exp.company}</p>
-                  {exp.location && exp.date && (
-                    <p className="text-xs text-muted-foreground">{exp.location} | {exp.date}</p>
-                  )}
-                  {!exp.location && exp.date && (
-                    <p className="text-xs text-muted-foreground">{exp.date}</p>
-                  )}
-                  <span className="inline-block mt-1 text-[10px] font-medium tracking-widest uppercase text-muted-foreground">
-                    {exp.type}
-                  </span>
-                  {exp.active && (
-                    <div className="mt-1.5">
-                      <span className="inline-flex items-center gap-1.5 text-xs font-medium text-accent">
-                        <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-                        Currently Active
-                      </span>
-                    </div>
-                  )}
-                </div>
-              </div>
-
-              <div className="flex-1">
-                <p className="text-sm text-muted-foreground leading-relaxed">{exp.desc}</p>
-              </div>
+               {/* Interactive Image Cards → Lightbox triggers */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 ml-0 md:ml-12">
+          {leadershipCategories.map((cat) => (
+            <AutoSliderCard key={cat.id} cat={cat} openLightbox={openLightbox} />
+          ))}
+        </div>
             </div>
           ))}
         </div>
