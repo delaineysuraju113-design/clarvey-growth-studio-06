@@ -12,17 +12,17 @@ const BuildingSection = () => {
             larvé
           </h2>
         </div>
-        <p className="text-muted-foreground max-w-2xl mb-10 leading-relaxed">
+        <p className="text-gray-800 max-w-2xl mb-10 leading-relaxed">
           Helping overlooked businesses get clear — and get seen.
         </p>
 
         <div className="grid md:grid-cols-2 gap-10 items-start">
-          <div className="space-y-6 text-muted-foreground leading-relaxed">
+          <div className="space-y-6 text-gray-800 leading-relaxed">
             <p>
-              <span className="text-foreground font-medium">Clarvé</span> is a research-driven marketing agency built for the entrepreneurs America overlooks — immigrant founders, women business owners, and underrepresented communities ready to grow beyond their block.
+              <span className="text-black font-extrabold">Clarvé</span> is a research-driven marketing agency built for the entrepreneurs America overlooks — immigrant founders, women business owners, and underrepresented communities ready to grow beyond their block.
             </p>
             <p>
-              These businesses aren't failing. They're being held back. Today, <span className="text-foreground font-medium">97% of consumers</span> search online before ever walking through a door — and businesses without a strong digital presence aren't just missing clicks, they're missing customers entirely.
+              These businesses aren't failing. They're being held back. Today, <span className="text-black font-extrabold">97% of consumers</span> search online before ever walking through a door — and businesses without a strong digital presence aren't just missing clicks, they're missing customers entirely.
             </p>
             <p>
               The gap isn't a talent problem. It's a visibility problem. Clarvé exists to close it through research-backed strategy, modern digital presence, and marketing built for founders the mainstream market has long ignored.
@@ -36,8 +36,8 @@ const BuildingSection = () => {
                   <Sparkles size={18} className="text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-sm font-semibold text-foreground">The Vision</h3>
-                  <p className="text-xs text-muted-foreground">Where Clarvé is headed</p>
+                  <h3 className="text-sm font-extrabold text-black">The Vision</h3>
+                  <p className="text-xs text-gray-600">Where Clarvé is headed</p>
                 </div>
               </div>
               <ul className="space-y-3">
@@ -47,7 +47,7 @@ const BuildingSection = () => {
                   "Build a portfolio focused on measurable results and impact",
                   "Grow Clarvé into a national, equity-driven consulting brand",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-2.5 text-sm text-muted-foreground">
+                  <li key={item} className="flex items-start gap-2.5 text-sm text-gray-800">
                     <ArrowUpRight size={14} className="text-accent mt-0.5 shrink-0" />
                     {item}
                   </li>
@@ -57,7 +57,7 @@ const BuildingSection = () => {
 
             <div className="p-5 rounded-lg border border-primary/20 bg-primary/5">
               <p className="text-xs font-medium tracking-widest uppercase text-primary mb-1">Status</p>
-              <p className="text-sm font-semibold text-foreground">In Development — Launching Soon</p>
+              <p className="text-sm font-extrabold text-black">In Development — Launching Soon</p>
             </div>
           </div>
         </div>
