@@ -176,12 +176,12 @@ const leadershipCategories: LeadershipCategory[] = [
         "Fellowship of Christian Athletes — building community through faith and sport.",
     },
     {
-      src: fcaGroupImg,
+      src: fcaTableImg,
       caption:
         "Brothers in faith and sport — FCA community night with the UTC crew.",
     },
     {
-      src: fcaTableImg,
+      src: fcaGroupImg,
       caption:
         "Summer internship with Ultimate Training Camp (UTC) — helping college athletes grow in their walk with Christ.",
     },
