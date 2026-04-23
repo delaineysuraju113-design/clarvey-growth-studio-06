@@ -29,12 +29,12 @@ const experiences = [
           immigrant, women, and underrepresented founders
         </strong>{" "}
         grow beyond their initial communities. I use{" "}
-        <strong className="text-foreground font-semibold">AI-driven tools</strong>,{" "}
-        <strong className="text-foreground font-semibold">brand strategy</strong>, and{" "}
-        <strong className="text-foreground font-semibold">data-backed marketing</strong>{" "}
+        <strong className="text-gray-800 font-semibold">AI-driven tools</strong>,{" "}
+        <strong className="text-gray-800 font-semibold">brand strategy</strong>, and{" "}
+        <strong className="text-gray-800 font-semibold">data-backed marketing</strong>{" "}
         to close the visibility gap and drive real business growth. My anchor case
         study is{" "}
-        <strong className="text-foreground font-semibold">Adom African Market</strong>,
+        <strong className="text-gray-800 font-semibold">Adom African Market</strong>,
         where I'm turning a local grocery store into a recognized cultural brand.
       </>
     ),
@@ -50,12 +50,12 @@ const experiences = [
     desc: (
       <>
         I will be leading{" "}
-        <strong className="text-foreground font-semibold">
+        <strong className="text-gray-800 font-semibold">
           full-cycle recruiting and account management
         </strong>
         , sourcing top talent while building long-term client partnerships. I will
         be driving placements, growing revenue, and sharpening the{" "}
-        <strong className="text-foreground font-semibold">
+        <strong className="text-gray-800 font-semibold">
           sales and relationship skills
         </strong>{" "}
         that carry directly into how I grow Clarvé.
@@ -72,13 +72,13 @@ const experiences = [
     desc: (
       <>
         I managed client relationships, delivered{" "}
-        <strong className="text-foreground font-semibold">
+        <strong className="text-gray-800 font-semibold">
           tailored financial solutions
         </strong>
         , and consistently hit performance goals in a fast-paced environment. I
         built trust quickly, handled high-volume client interactions, and learned
         how to translate complex financial products into{" "}
-        <strong className="text-foreground font-semibold">
+        <strong className="text-gray-800 font-semibold">
           clear value for real people
         </strong>
         .
@@ -94,16 +94,16 @@ const experiences = [
     desc: (
       <>
         I generated leads through{" "}
-        <strong className="text-foreground font-semibold">
+        <strong className="text-gray-800 font-semibold">
           high-volume cold calling
         </strong>
         , sourced{" "}
-        <strong className="text-foreground font-semibold">
+        <strong className="text-gray-800 font-semibold">
           off-market real estate deals
         </strong>
         , and negotiated contracts directly with sellers. I sharpened my ability
         to open conversations with strangers, handle objections, and{" "}
-        <strong className="text-foreground font-semibold">close under pressure</strong>{" "}
+        <strong className="text-gray-800 font-semibold">close under pressure</strong>{" "}
         — skills I use every day in sales and client work.
       </>
     ),
