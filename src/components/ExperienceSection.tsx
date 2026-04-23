@@ -23,18 +23,18 @@ const experiences = [
     type: "Entrepreneurship",
     desc: (
       <>
-        I built <strong className="text-foreground font-semibold">Clarvé</strong>, a
+        I built <strong className="text-black font-extrabold">Clarvé</strong>, a
         research-driven marketing brand helping{" "}
-        <strong className="text-foreground font-semibold">
+        <strong className="text-black font-extrabold">
           immigrant, women, and underrepresented founders
         </strong>{" "}
         grow beyond their initial communities. I use{" "}
-        <strong className="text-gray-800 font-semibold">AI-driven tools</strong>,{" "}
-        <strong className="text-gray-800 font-semibold">brand strategy</strong>, and{" "}
-        <strong className="text-gray-800 font-semibold">data-backed marketing</strong>{" "}
+        <strong className="text-black font-extrabold">AI-driven tools</strong>,{" "}
+        <strong className="text-black font-extrabold">brand strategy</strong>, and{" "}
+        <strong className="text-black font-extrabold">data-backed marketing</strong>{" "}
         to close the visibility gap and drive real business growth. My anchor case
         study is{" "}
-        <strong className="text-gray-800 font-semibold">Adom African Market</strong>,
+        <strong className="text-black font-extrabold">Adom African Market</strong>,
         where I'm turning a local grocery store into a recognized cultural brand.
       </>
     ),
@@ -50,12 +50,12 @@ const experiences = [
     desc: (
       <>
         I will be leading{" "}
-        <strong className="text-gray-800 font-semibold">
+        <strong className="text-black font-extrabold">
           full-cycle recruiting and account management
         </strong>
         , sourcing top talent while building long-term client partnerships. I will
         be driving placements, growing revenue, and sharpening the{" "}
-        <strong className="text-gray-800 font-semibold">
+        <strong className="text-black font-extrabold">
           sales and relationship skills
         </strong>{" "}
         that carry directly into how I grow Clarvé.
@@ -72,13 +72,13 @@ const experiences = [
     desc: (
       <>
         I managed client relationships, delivered{" "}
-        <strong className="text-gray-800 font-semibold">
+        <strong className="text-black font-extrabold">
           tailored financial solutions
         </strong>
         , and consistently hit performance goals in a fast-paced environment. I
         built trust quickly, handled high-volume client interactions, and learned
         how to translate complex financial products into{" "}
-        <strong className="text-gray-800 font-semibold">
+        <strong className="text-black font-extrabold">
           clear value for real people
         </strong>
         .
@@ -94,16 +94,16 @@ const experiences = [
     desc: (
       <>
         I generated leads through{" "}
-        <strong className="text-gray-800 font-semibold">
+        <strong className="text-black font-extrabold">
           high-volume cold calling
         </strong>
         , sourced{" "}
-        <strong className="text-gray-800 font-semibold">
+        <strong className="text-black font-extrabold">
           off-market real estate deals
         </strong>
-        , and negotiated contracts directly with sellers. I sharpened my ability
-        to open conversations with strangers, handle objections, and{" "}
-        <strong className="text-gray-800 font-semibold">close under pressure</strong>{" "}
+        , and negotiated contracts directly with sellers. I sharpened my ability to
+        open conversations with strangers, handle objections, and{" "}
+        <strong className="text-black font-extrabold">close under pressure</strong>{" "}
         — skills I use every day in sales and client work.
       </>
     ),
@@ -112,16 +112,16 @@ const experiences = [
 
 const leadership = [
   <>
-    <strong className="text-black font-bold">Student-Athlete, University of St. Thomas Football</strong> — Division I
+    <strong className="text-black font-extrabold">Student-Athlete, University of St. Thomas Football</strong> — Division I
   </>,
   <>
-    <strong className="text-black font-bold">SAAC Representative</strong> (Student-Athlete Advisory Committee)
+    <strong className="text-black font-extrabold">SAAC Representative</strong> (Student-Athlete Advisory Committee)
   </>,
   <>
-    <strong className="text-black font-bold">FCA Leader</strong> (Fellowship of Christian Athletes)
+    <strong className="text-black font-extrabold">FCA Leader</strong> (Fellowship of Christian Athletes)
   </>,
   <>
-    <strong className="text-black font-bold">Student Advocate – Higher Education Policy</strong> | Partnered with a Minnesota State Representative to address proposed State Grant reforms and their implications for student affordability.
+    <strong className="text-black font-extrabold">Student Advocate – Higher Education Policy</strong> | Partnered with a Minnesota State Representative to address proposed State Grant reforms and their implications for student affordability.
   </>,
 ];
 
@@ -418,7 +418,7 @@ const ExperienceSection = () => {
         <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
           Where I've Earned My Skills
         </h2>
-       <p className="text-foreground/80 max-w-2xl mb-12 leading-relaxed text-base">
+      <p className="text-gray-800 max-w-2xl mb-12 leading-relaxed text-base">
   Every role I've taken has been intentional — each one building on the last.
 </p>
 
@@ -461,7 +461,7 @@ const ExperienceSection = () => {
                     <span className="text-xs text-muted-foreground self-center ml-auto">{exp.date}</span>
                   )}
                 </div>
-<div className="text-foreground/80 text-sm leading-relaxed">{exp.desc}</div>
+<div className="text-gray-800 text-sm leading-relaxed">{exp.desc}</div>
               </div>
             </div>
           ))}
@@ -478,7 +478,7 @@ const ExperienceSection = () => {
 
           <ul className="space-y-6 ml-12">
             {leadership.map((item, i) => (
-<li key={i} className="flex items-start gap-3 text-sm text-foreground/80 leading-relaxed">
+<li key={i} className="flex items-start gap-3 text-sm text-gray-800 leading-relaxed">
                 <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
                 <span>{item}</span>
               </li>
