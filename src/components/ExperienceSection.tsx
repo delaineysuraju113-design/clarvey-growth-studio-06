@@ -407,14 +407,14 @@ const AutoSliderCard = ({ cat, openLightbox }: { cat: any; openLightbox: any }) 
   );
 };
 const ExperienceSection = () => {
-  const [activeCategory, setActiveCategory] =
-    useState<LeadershipCategory | null>(null);
+  const [activeCategory, setActiveCategory] = useState<LeadershipCategory | null>(null);
   const [startIndex, setStartIndex] = useState(0);
 
   const openLightbox = (category: LeadershipCategory, i = 0) => {
     setActiveCategory(category);
     setStartIndex(i);
   };
+
   const closeLightbox = () => setActiveCategory(null);
 
   return (
@@ -433,28 +433,42 @@ const ExperienceSection = () => {
             <div
               key={exp.company}
               className={`group relative flex flex-col md:flex-row md:items-start gap-5 md:gap-14 py-10 ${
-                i !== experiences.length - 1 ? "border-b border-border" : "border-b border-border"
+                i !== experiences.length - 1 ? "border-b border-border" : ""
               }`}
             >
               <div className="md:w-72 shrink-0 flex items-start gap-3">
                 <div className="mt-0.5 w-12 h-12 rounded-lg bg-card border border-border flex items-center justify-center shrink-0 overflow-hidden">
                   {exp.logo ? (
-                    <img
-                      src={exp.logo}
-                      alt={`${exp.company} logo`}
-                      className="w-full h-full object-cover"
-                    />
+                    <img src={exp.logo} alt={`${exp.company} logo`} className="w-full h-full object-cover" />
                   ) : (
                     <Briefcase size={16} className="text-primary" />
                   )}
                 </div>
                 <div>
-               {/* Interactive Image Cards → Lightbox triggers */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 ml-0 md:ml-12">
-          {leadershipCategories.map((cat) => (
-            <AutoSliderCard key={cat.id} cat={cat} openLightbox={openLightbox} />
-          ))}
-        </div>
+                  <h3 className="text-xl font-heading font-bold text-foreground">{exp.role}</h3>
+                  <p className="text-primary font-medium text-sm">{exp.company}</p>
+                  {exp.active && (
+                    <span className="inline-block mt-2 px-2 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase bg-accent/10 text-accent border border-accent/20">
+                      Currently Active
+                    </span>
+                  )}
+                </div>
+              </div>
+
+              <div className="flex-1">
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="px-2.5 py-1 rounded-full bg-secondary text-[10px] font-bold tracking-wider uppercase text-secondary-foreground">
+                    {exp.type}
+                  </span>
+                  {exp.location && (
+                    <span className="text-xs text-muted-foreground self-center">{exp.location}</span>
+                  )}
+                  {exp.date && (
+                    <span className="text-xs text-muted-foreground self-center ml-auto">{exp.date}</span>
+                  )}
+                </div>
+                <div className="text-muted-foreground text-sm leading-relaxed">{exp.desc}</div>
+              </div>
             </div>
           ))}
         </div>
@@ -477,46 +491,17 @@ const ExperienceSection = () => {
             ))}
           </ul>
 
-          {/* Interactive Image Cards → Lightbox triggers */}
+          {/* Interactive Image Cards -> Auto Slider */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 ml-0 md:ml-12">
-           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 ml-0 md:ml-12">
-  {leadershipCategories.map((cat) => (
-    <AutoSliderCard key={cat.id} cat={cat} openLightbox={openLightbox} />
-  ))}
-</div>
-                >
-                  <img
-                    src={cover.src}
-                    alt={cat.alt}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent transition-opacity duration-300 group-hover:from-black/90" />
-                  <div className="absolute inset-x-0 bottom-0 p-5 transform transition-transform duration-300 ease-out group-hover:-translate-y-1">
-                    <h4 className="text-white text-base font-heading font-semibold mb-1 drop-shadow">
-                      {cat.title}
-                    </h4>
-                    <p className="text-white/90 text-xs leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-                      {cat.coverCaption}
-                    </p>
-                    {cat.images.length > 1 && (
-                      <span className="inline-block mt-2 text-[10px] font-medium tracking-widest uppercase text-white/70">
-                        {cat.images.length} photos
-                      </span>
-                    )}
-                  </div>
-                </button>
-              );
-            })}
+            {leadershipCategories.map((cat) => (
+              <AutoSliderCard key={cat.id} cat={cat} openLightbox={openLightbox} />
+            ))}
           </div>
         </div>
       </div>
 
       {/* Lightbox overlay */}
-      <Lightbox
-        category={activeCategory}
-        startIndex={startIndex}
-        onClose={closeLightbox}
-      />
+      <Lightbox category={activeCategory} startIndex={startIndex} onClose={closeLightbox} />
     </section>
   );
 };
