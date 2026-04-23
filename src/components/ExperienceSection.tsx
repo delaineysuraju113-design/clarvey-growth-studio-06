@@ -112,16 +112,16 @@ const experiences = [
 
 const leadership = [
   <>
-    <strong>Student-Athlete, University of St. Thomas Football</strong> — Division I
+    <strong className="text-black font-bold">Student-Athlete, University of St. Thomas Football</strong> — Division I
   </>,
   <>
-    <strong>SAAC Representative</strong> (Student-Athlete Advisory Committee)
+    <strong className="text-black font-bold">SAAC Representative</strong> (Student-Athlete Advisory Committee)
   </>,
   <>
-    <strong>FCA Leader</strong> (Fellowship of Christian Athletes)
+    <strong className="text-black font-bold">FCA Leader</strong> (Fellowship of Christian Athletes)
   </>,
   <>
-    <strong>Student Advocate – Higher Education Policy</strong> | Partnered with a Minnesota State Representative to address proposed State Grant reforms and their implications for student affordability.
+    <strong className="text-black font-bold">Student Advocate – Higher Education Policy</strong> | Partnered with a Minnesota State Representative to address proposed State Grant reforms and their implications for student affordability.
   </>,
 ];
 
