@@ -7,6 +7,9 @@ import studentAdvocateImg from "@/assets/student-advocate.jpg";
 import policyPhoto1 from "@/assets/IMG_1422.jpeg";
    import policyPhoto2 from "@/assets/FullSizeRender.jpeg";
 import fcaLeaderImg from "@/assets/fca-leader.jpg";
+import fcaGroupImg from "@/assets/fca-group.jpeg";
+import fcaTableImg from "@/assets/fca-table.jpeg";
+import fcaSpeakingImg from "@/assets/fca-speaking.jpeg";
 import footballTeamImg from "@/assets/football-team.jpg";
 import clarveLogo from "@/assets/clarve-logo.png";
 import insightGlobalLogo from "@/assets/insight-global-logo.jpg";
@@ -160,22 +163,35 @@ const leadershipCategories: LeadershipCategory[] = [
     },
   ],
 },
-  {
-    id: "fca",
-    title: "FCA Leader",
-    alt: "Delainey Suraju with Fellowship of Christian Athletes team",
-    coverCaption:
-      "Fellowship of Christian Athletes — building community through faith and sport.",
-    images: [
-      {
-        src: fcaLeaderImg,
-        caption:
-          "Fellowship of Christian Athletes — building community through faith and sport.",
-      },
-      // Add more FCA images here:
-      // { src: fcaImg2, caption: "Weekly huddle on campus." },
-    ],
-  },
+{
+  id: "fca",
+  title: "FCA Leader",
+  alt: "Delainey Suraju with Fellowship of Christian Athletes team",
+  coverCaption:
+    "Fellowship of Christian Athletes — building community through faith and sport.",
+  images: [
+    {
+      src: fcaLeaderImg,
+      caption:
+        "Fellowship of Christian Athletes — building community through faith and sport.",
+    },
+    {
+      src: fcaGroupImg,
+      caption:
+        "Brothers in faith and sport — FCA community night with the UTC crew.",
+    },
+    {
+      src: fcaTableImg,
+      caption:
+        "Late-night FCA huddle on campus — pouring into each other through Scripture and stories.",
+    },
+    {
+      src: fcaSpeakingImg,
+      caption:
+        "Sharing testimony at a joint FCA and Athletes in Action gathering in the Twin Cities.",
+    },
+  ],
+},
   {
     id: "football",
     title: "Football",
