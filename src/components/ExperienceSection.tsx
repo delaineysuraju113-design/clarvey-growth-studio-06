@@ -208,6 +208,7 @@ const leadershipCategories: LeadershipCategory[] = [
       caption:
         "St. Thomas Football: Pre-game at NDSU.",
     },
+ ],
       // { src: footballImg2, caption: "Pregame warmups." },
     ],
   },
