@@ -12,6 +12,7 @@ import fcaGroupImg from "@/assets/IMG_1380_Original.jpeg";
 import fcaSpeakingImg from "@/assets/IMG_5375.jpeg";
 import footballImg1 from "@/assets/football-team.jpg";
 import footballImg2 from "@/assets/IMG_7555.jpeg";
+import footballImg3 from "@/assets/IMG_4936.jpg"; 
 import clarveLogo from "@/assets/clarve-logo.png";
 import insightGlobalLogo from "@/assets/insight-global-logo.jpg";
 import usBankLogo from "@/assets/us-bank-logo.webp";
@@ -197,6 +198,10 @@ const leadershipCategories: LeadershipCategory[] = [
       {
         src: footballImg2,
         caption: "St. Thomas Football: Pre-game at NDSU.",
+      },
+      {
+          src: footballImg3,
+        caption: "Homecoming game",
       },
     ],
   },
