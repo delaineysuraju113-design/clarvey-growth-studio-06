@@ -5,9 +5,15 @@ const BuildingSection = () => {
   return (
     <section id="building" className="section-padding bg-card">
       <div className="section-container">
-        <p className="text-xs font-medium tracking-widest uppercase text-accent mb-4">What I'm Building</p>
+        <p className="text-xs font-medium tracking-widest uppercase text-accent mb-4">
+          What I'm Building
+        </p>
         <div className="flex items-center gap-0 mb-4">
-          <img src={clarveLogo} alt="Clarvé logo" className="w-14 h-14 object-contain" />
+          <img
+            src={clarveLogo}
+            alt="Clarvé logo"
+            className="w-14 h-14 object-contain"
+          />
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground -ml-1">
             larvé
           </h2>
@@ -19,13 +25,17 @@ const BuildingSection = () => {
         <div className="grid md:grid-cols-2 gap-10 items-start">
           <div className="space-y-6 text-gray-800 leading-relaxed">
             <p>
-              <span className="text-black font-extrabold">Clarvé</span> is a research-driven marketing agency built for the entrepreneurs America overlooks — immigrant founders, women business owners, and underrepresented communities ready to grow beyond their block.
+              <strong className="text-black font-extrabold">Clarvé</strong> is a research-driven marketing agency built for the founders America overlooks:{" "}
+              <strong className="text-black font-extrabold">immigrants, women, and underrepresented communities</strong>{" "}
+              ready to grow beyond their block.
             </p>
             <p>
-              These businesses aren't failing. They're being held back. Today, <span className="text-black font-extrabold">97% of consumers</span> search online before ever walking through a door — and businesses without a strong digital presence aren't just missing clicks, they're missing customers entirely.
+              These businesses aren't failing — they're being held back. With{" "}
+              <strong className="text-black font-extrabold">97% of consumers</strong>{" "}
+              searching online before stepping through a door, a weak digital presence doesn't just cost clicks. It costs customers.
             </p>
             <p>
-              The gap isn't a talent problem. It's a visibility problem. Clarvé exists to close it through research-backed strategy, modern digital presence, and marketing built for founders the mainstream market has long ignored.
+              The gap isn't talent. It's <strong className="text-black font-extrabold">visibility</strong>. Clarvé exists to close it.
             </p>
           </div>
 
@@ -47,17 +57,26 @@ const BuildingSection = () => {
                   "Build a portfolio focused on measurable results and impact",
                   "Grow Clarvé into a national, equity-driven consulting brand",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-2.5 text-sm text-gray-800">
-                    <ArrowUpRight size={14} className="text-accent mt-0.5 shrink-0" />
+                  <li
+                    key={item}
+                    className="flex items-start gap-2.5 text-sm text-gray-800"
+                  >
+                    <ArrowUpRight
+                      size={14}
+                      className="text-accent mt-0.5 shrink-0"
+                    />
                     {item}
                   </li>
                 ))}
               </ul>
             </div>
-
             <div className="p-5 rounded-lg border border-primary/20 bg-primary/5">
-              <p className="text-xs font-medium tracking-widest uppercase text-primary mb-1">Status</p>
-              <p className="text-sm font-extrabold text-black">In Development — Launching Soon</p>
+              <p className="text-xs font-medium tracking-widest uppercase text-primary mb-1">
+                Status
+              </p>
+              <p className="text-sm font-extrabold text-black">
+                In Development — Launching Soon
+              </p>
             </div>
           </div>
         </div>
