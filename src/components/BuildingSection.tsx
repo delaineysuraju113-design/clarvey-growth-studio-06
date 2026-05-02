@@ -23,7 +23,8 @@ const BuildingSection = () => {
         </p>
 
         <div className="grid md:grid-cols-2 gap-10 items-start">
-          <div className="space-y-6 text-gray-800 leading-relaxed">
+          {/* Changed space-y-6 to space-y-4 right here to reduce the gap! */}
+          <div className="space-y-4 text-gray-800 leading-relaxed">
             <p>
               <strong className="text-black font-extrabold">Clarvé</strong> is a research-driven marketing agency built for the founders America overlooks:{" "}
               <strong className="text-black font-extrabold">immigrants, women, and underrepresented communities</strong>{" "}
