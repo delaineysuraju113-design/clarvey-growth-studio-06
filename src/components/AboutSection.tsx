@@ -1,4 +1,4 @@
-import import footballImg from "@/assets/football.jpg";
+import footballImg from "@/assets/football.jpg";
 
 const AboutSection = () => {
   return (
