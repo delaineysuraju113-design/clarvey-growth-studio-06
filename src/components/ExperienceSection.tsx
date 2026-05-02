@@ -84,19 +84,17 @@ const experiences = [
     date: "Jan 2022 – Mar 2024",
     type: "Sales & Negotiation",
     desc: (
-      <>
-        I generated leads through{" "}
+     <>
         <strong className="text-black font-extrabold">
-          high-volume cold calling
+          I Cold-called at high volume
         </strong>
         , sourced{" "}
         <strong className="text-black font-extrabold">
-          off-market real estate deals
+          off-market deals
         </strong>
-        , and negotiated contracts directly with sellers. I sharpened my ability to
-        open conversations with strangers, handle objections, and{" "}
-        <strong className="text-black font-extrabold">close under pressure</strong>{" "}
-        — skills I use every day in sales and client work.
+        , and closed contracts directly with sellers — building the{" "}
+        <strong className="text-black font-extrabold">sales fundamentals</strong>{" "}
+        I use every day.
       </>
     ),
   },
