@@ -64,18 +64,16 @@ const experiences = [
     date: "Jan 2025 – Aug 2025",
     type: "Banking & Finance",
     desc: (
-      <>
-        I managed client relationships, delivered{" "}
+     <>
+        I managed{" "}
         <strong className="text-black font-extrabold">
-          tailored financial solutions
+          high-volume client relationships
         </strong>
-        , and consistently hit performance goals in a fast-paced environment. I
-        built trust quickly, handled high-volume client interactions, and learned
-        how to translate complex financial products into{" "}
-        <strong className="text-black font-extrabold">
-          clear value for real people
-        </strong>
-        .
+        , hit performance goals consistently, and learned to turn complex financial products into{" "}
+        <strong className="text-black font-extrabold">clear value</strong>
+        . All while in the middle of{" "}
+        <strong className="text-black font-extrabold">spring football season</strong>{" "}
+        and on top of all my academics.
       </>
     ),
     logo: usBankLogo,
