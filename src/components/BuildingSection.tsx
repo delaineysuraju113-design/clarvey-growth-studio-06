@@ -24,30 +24,34 @@ const BuildingSection = () => {
         </p>
 
         <div className="grid md:grid-cols-2 gap-10 items-start">
-          <div className="space-y-4 text-gray-800 leading-relaxed">
-            <p>
-              <strong className="text-black font-extrabold">Clarvé</strong> is a research-driven marketing agency built for the founders America overlooks:{" "}
-              <strong className="text-black font-extrabold">immigrants, women, and underrepresented communities</strong>{" "}
-              ready to grow beyond their block.
-            </p>
-            <p>
-              These businesses aren't failing — they're being held back. With{" "}
-              <strong className="text-black font-extrabold">97% of consumers</strong>{" "}
-              searching online before stepping through a door, a weak digital presence doesn't just cost clicks. It costs customers.
-            </p>
-            <p>
-              The gap isn't talent. It's <strong className="text-black font-extrabold">visibility</strong>. Clarvé exists to close it.
-            </p>
-          </div>
-
-          <div className="space-y-4">
-            {/* Added Image Here */}
+          {/* Left Column: Text + Image */}
+          <div className="flex flex-col gap-8">
+            <div className="space-y-4 text-gray-800 leading-relaxed">
+              <p>
+                <strong className="text-black font-extrabold">Clarvé</strong> is a research-driven marketing agency built for the founders America overlooks:{" "}
+                <strong className="text-black font-extrabold">immigrants, women, and underrepresented communities</strong>{" "}
+                ready to grow beyond their block.
+              </p>
+              <p>
+                These businesses aren't failing — they're being held back. With{" "}
+                <strong className="text-black font-extrabold">97% of consumers</strong>{" "}
+                searching online before stepping through a door, a weak digital presence doesn't just cost clicks. It costs customers.
+              </p>
+              <p>
+                The gap isn't talent. It's <strong className="text-black font-extrabold">visibility</strong>. Clarvé exists to close it.
+              </p>
+            </div>
+            
+            {/* Moved Image Here to balance the layout */}
             <img 
               src={buildingImg} 
               alt="Clarvé Vision" 
-              className="w-full h-64 object-cover rounded-lg shadow-sm border border-border"
+              className="w-full h-64 md:h-72 object-cover rounded-lg shadow-sm border border-border"
             />
+          </div>
 
+          {/* Right Column: Vision + Status Cards */}
+          <div className="flex flex-col gap-6">
             <div className="p-6 rounded-lg border border-border bg-background">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center">
