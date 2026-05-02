@@ -36,7 +36,7 @@ const BuildingSection = () => {
               searching online before stepping through a door, a weak digital presence doesn't just cost clicks. It costs customers.
             </p>
             <p>
-              The gap isn't talent. It's <strong className="text-black font-extrabold">visibility</strong>. Clarvé exists to close it.
+              The gap isn't talent. It's <strong className="text-black font-extrabold">visibility</strong>. <strong className="text-black font-extrabold">Clarvé</strong> exists to close it.
             </p>
           </div>
 
