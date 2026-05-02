@@ -16,14 +16,14 @@ const AboutSection = () => {
           <div className="space-y-6 text-gray-800 leading-relaxed">
             <p>
               My name is Delainey Suraju, and I'm a senior student-athlete at the{" "}
-              <strong className="text-black font-extrabold">University of St. Thomas</strong>, finishing a degree in Business Management & minor in Psychology. As one would assume, I didn't grow up privileged, I wasn't gifted with natural athleticism, and I didn't have opportunities handed to me. What put me in the position I'm in now was exactly that — <strong className="text-black font-extrabold">the things not given to me.</strong>
+              <strong className="text-black font-extrabold">University of St. Thomas</strong>, finishing a degree in Business Management & Minor in Psychology. As one would assume, I didn't grow up privileged, I wasn't gifted with natural athleticism, and I didn't have opportunities handed to me. What put me in the position I'm in now was exactly that, <strong className="text-black font-extrabold">the things not given to me.</strong>
             </p>
             <p>
               I grew up in a small town in Minnesota with parents who immigrated from{" "}
               <strong className="text-black font-extrabold">Ghana</strong>. Watching them <strong className="text-black font-extrabold">sacrifice</strong> for me and my two siblings, shaped everything. Their discipline, resilience, and faith <strong className="text-black font-extrabold">became my own.</strong>
             </p>
             <p>
-              That foundation <strong className="text-black font-extrabold">pushed</strong> me to chase dreams others called unrealistic — like walking on at a Division I program as an undersized (6-foot) D-lineman. I finished my career playing in <strong className="text-black font-extrabold">14 games with 15 tackles, 1 forced fumble, and 1 fumble recovery.</strong>
+              That foundation <strong className="text-black font-extrabold">pushed</strong> me to chase dreams others called "unrealistic", like walking on at a Division I program as an undersized (6-foot) D-lineman. I finished my career playing in <strong className="text-black font-extrabold">14 games with 15 tackles, 1 forced fumble, and 1 fumble recovery.</strong>
             </p>
             <p>
               Today, I'm focused on building something greater than myself. I'm starting at{" "}
