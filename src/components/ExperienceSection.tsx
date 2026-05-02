@@ -24,19 +24,16 @@ const experiences = [
     type: "Entrepreneurship",
     desc: (
       <>
-        I built <strong className="text-black font-extrabold">Clarvé</strong>, a
-        research-driven marketing brand helping{" "}
+        Built a research-driven marketing brand helping{" "}
         <strong className="text-black font-extrabold">
           immigrant, women, and underrepresented founders
         </strong>{" "}
-        grow beyond their initial communities. I use{" "}
-        <strong className="text-black font-extrabold">AI-driven tools</strong>,{" "}
+        grow through{" "}
+        <strong className="text-black font-extrabold">AI tools</strong>,{" "}
         <strong className="text-black font-extrabold">brand strategy</strong>, and{" "}
         <strong className="text-black font-extrabold">data-backed marketing</strong>{" "}
-        to close the visibility gap and drive real business growth. My anchor case
-        study is{" "}
-        <strong className="text-black font-extrabold">Adom African Market</strong>,
-        where I'm turning a local grocery store into a recognized cultural brand.
+        — anchored by a live transformation of{" "}
+        <strong className="text-black font-extrabold">Adom African Market</strong>.
       </>
     ),
     active: true,
