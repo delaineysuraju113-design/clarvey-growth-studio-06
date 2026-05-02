@@ -13,7 +13,7 @@ const CaseStudySection = () => {
         </h2>
         <div className="flex flex-wrap gap-x-6 gap-y-1 mb-8 text-sm text-gray-100">
           <span>
-            <span className="text-white font-extrabold">Location ·</span> Minnesota, USA
+            <span className="text-white font-extrabold">Location ·</span>  1224 E 66th St, Minneapolis, MN 55423
           </span>
           <span>
             <span className="text-white font-extrabold">Industry ·</span> African Grocery Retail
