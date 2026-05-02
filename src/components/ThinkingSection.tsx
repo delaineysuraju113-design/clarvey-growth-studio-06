@@ -6,9 +6,8 @@ const principles = [
     title: 'Dual Heritage',
     body: (
       <>
-        Rooted in <em className="italic">claro</em> (clarity) and{' '}
-        <em className="italic">convey</em> (delivery). Built for those navigating
-        worlds and systems not originally designed for them.
+        Rooted in <em className="italic font-semibold text-black">claro</em> (clarity) and{' '}
+        <em className="italic font-semibold text-black">convey</em> (delivery) — built for those navigating systems not designed for them.
       </>
     ),
   },
@@ -17,12 +16,7 @@ const principles = [
     title: 'The Amplified Story',
     body: (
       <>
-        Closing the gap for{' '}
-        <strong className="text-black font-extrabold">
-          women and immigrant founders
-        </strong>{' '}
-        who have faced skepticism or been overlooked. We ensure your story is
-        finally heard.
+        <strong className="text-black font-extrabold">Women and immigrant founders</strong> have been overlooked for too long. We make sure their story finally gets heard.
       </>
     ),
   },
@@ -31,8 +25,7 @@ const principles = [
     title: 'Eliminating the Friction',
     body: (
       <>
-        Removing the noise of technical marketing and AI. We handle the gears so
-        you can focus on leading your vision.
+        We handle the <strong className="text-black font-extrabold">marketing and AI gears</strong> so founders can focus on leading their vision.
       </>
     ),
   },
@@ -41,8 +34,7 @@ const principles = [
     title: 'Strategic Silence',
     body: (
       <>
-        Replacing chaos with a clear path. When the marketplace static fades,
-        your brand is the only thing left to see.
+        When the marketplace static fades, your brand is the <strong className="text-black font-extrabold">only thing left to see</strong>.
       </>
     ),
   },
