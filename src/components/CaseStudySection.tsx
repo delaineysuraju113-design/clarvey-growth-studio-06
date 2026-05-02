@@ -23,16 +23,14 @@ const CaseStudySection = () => {
         
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="space-y-6 text-gray-100 leading-relaxed">
-            <p>
-              <strong className="text-white font-extrabold">Adom African Market</strong> is a family-owned grocery store
-              offering an authentic range of West African products — from goat meat and stockfish to specialty flours, traditional
-              spices, clothing, and cultural goods. Over the years, the store built a loyal customer base through trust and
-              relationships, but its digital presence wasn't reflecting the strength of the business.
+           <p>
+              <strong className="text-white font-extrabold">Adom African Market</strong> is a family-owned shop stocked with authentic West African staples — goat meat, stockfish, specialty flours, spices, and cultural goods. The store earned a loyal community through trust, but its digital presence didn't match the strength of the business.
             </p>
             <p>
-              This project is a <strong className="text-white font-extrabold">full marketing transformation</strong>: building a website with SEO-optimized inventory and local delivery,
-              establishing a social media presence, developing brand positioning, and implementing customer acquisition
-              strategies — all designed to reach a wider audience while staying true to the store's cultural identity.
+              <strong className="text-white font-extrabold">Clarvé</strong> is leading a full marketing transformation: brand positioning, a new website with SEO-optimized inventory and local delivery, social media growth, and customer acquisition campaigns — all built to expand reach without losing cultural identity.
+            </p>
+            <p>
+              This is Clarvé's <strong className="text-white font-extrabold">anchor case study</strong> — proof of what happens when overlooked businesses finally get the <strong className="text-white font-extrabold">visibility</strong> they've earned.
             </p>
             <p>
               Adom African Market serves as <strong className="text-white font-extrabold">Clarvé's anchor case study</strong> — a
