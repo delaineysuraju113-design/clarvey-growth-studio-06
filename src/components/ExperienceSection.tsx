@@ -50,13 +50,9 @@ const experiences = [
         I will be leading{" "}
         <strong className="text-black font-extrabold">
           full-cycle recruiting and account management
-        </strong>
-        , sourcing top talent while building long-term client partnerships. I will
-        be driving placements, growing revenue, and sharpening the{" "}
-        <strong className="text-black font-extrabold">
-          sales and relationship skills
         </strong>{" "}
-        that carry directly into how I grow Clarvé.
+        — driving placements, growing revenue, and building{" "}
+        <strong className="text-black font-extrabold">client trust.</strong>{" "}
       </>
     ),
     logo: insightGlobalLogo,
