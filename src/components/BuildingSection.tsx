@@ -79,5 +79,18 @@ const BuildingSection = () => {
               </ul>
             </div>
             <div className="p-5 rounded-lg border border-primary/20 bg-primary/5">
-              <p className="text
+              <p className="text-xs font-medium tracking-widest uppercase text-primary mb-1">
+                Status
+              </p>
+              <p className="text-sm font-extrabold text-black">
+                In Development — Launching Soon
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 export default BuildingSection;
