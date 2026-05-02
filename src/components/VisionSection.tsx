@@ -16,25 +16,19 @@ const VisionSection = () => {
             <p>
               My long-term goal is to become a{" "}
               <strong className="text-black font-extrabold">
-                high-level business consultant and strategist
+                high-level business consultant and authentic strategist
               </strong>{" "}
-              — a man continuously growing and applying his skills to benefit
-              himself, the people he cares about, and future generations to come.
+              — a man who keeps growing and uses every skill he picks up to benefit himself, the people around him, and the generations to come. A man building for his future family.
             </p>
             <p>
-              I want to excel and grow tremendously at{" "}
+              At{" "}
               <strong className="text-black font-extrabold">
                 Insight Global
-              </strong>{" "}
-              — learning from the best, sharpening my client relationship skills,
-              deepening my communication, and building real trust within companies
-              and organizations. Pushing past my limits, facing fears head-on,
-              getting out of my comfort zone, and becoming a better leader every day.
+              </strong>
+              , I plan to excel — learning from the best, sharpening my communication, and building real trust inside every room I step into. Pushing past limits, facing fears head-on, and bringing my full identity into the work.
             </p>
             <p>
-              Every experience I've had — from the football field to cold calling to
-              running my own agency — has been building toward this. I'm not waiting
-              for the opportunity. I'm creating it.
+              My background made me who I am, and these dreams won't stop until they're reality. Inspired by every win and loss, I'll keep enduring as long as the Lord lets me.
             </p>
           </div>
 
