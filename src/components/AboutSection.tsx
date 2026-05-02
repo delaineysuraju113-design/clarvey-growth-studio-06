@@ -25,7 +25,7 @@ const AboutSection = () => {
               Today, I'm starting my career at{" "}
               <strong className="text-black font-extrabold">Insight Global</strong>{" "}
               while building{" "}
-              <strong className="text-black font-extrabold">Clarvé</strong>, a research-driven marketing brand helping immigrant, women, and underrepresented founders grow beyond their initial communities. I'm focused on building something greater than myself — for my family, my community, and the generations to come.
+              <strong className="text-black font-extrabold">Clarvé</strong>, a research-driven marketing brand helping  <strong className="text-black font-extrabold">immigrant, women, and underrepresented founders</strong> grow beyond their initial communities. I'm focused on building something greater than myself — for my family, my community, and the generations to come.
             </p>
           </div>
 
