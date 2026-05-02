@@ -13,7 +13,7 @@ const CaseStudySection = () => {
         </h2>
         <div className="flex flex-wrap gap-x-6 gap-y-1 mb-8 text-sm text-gray-100">
           <span>
-            <span className="text-white font-extrabold">Location ·</span>  1224 E 66th St, Minneapolis, MN 55423
+            <span className="text-white font-extrabold">Location ·</span> Minnesota, USA
           </span>
           <span>
             <span className="text-white font-extrabold">Industry ·</span> African Grocery Retail
@@ -29,7 +29,8 @@ const CaseStudySection = () => {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Left Column: Text + Image (Balanced Layout) */}
           <div className="flex flex-col gap-8">
-            <div className="space-y-6 text-gray-100 leading-relaxed">
+            {/* Reduced from space-y-6 to space-y-4 right here! */}
+            <div className="space-y-4 text-gray-100 leading-relaxed">
               <p>
                 <strong className="text-white font-extrabold">Adom African Market</strong> is a family-owned shop stocked with authentic West African staples — goat meat, stockfish, specialty flours, spices, and cultural goods. The store earned a loyal community through trust, but its digital presence didn't match the strength of the business.
               </p>
