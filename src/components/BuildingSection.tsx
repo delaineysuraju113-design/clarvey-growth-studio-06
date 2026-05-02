@@ -1,5 +1,6 @@
 import { ArrowUpRight, Sparkles } from "lucide-react";
 import clarveLogo from "@/assets/clarve-logo.png";
+import buildingImg from "@/assets/IMG_8605.jpg";
 
 const BuildingSection = () => {
   return (
@@ -23,7 +24,6 @@ const BuildingSection = () => {
         </p>
 
         <div className="grid md:grid-cols-2 gap-10 items-start">
-          {/* Changed space-y-6 to space-y-4 right here to reduce the gap! */}
           <div className="space-y-4 text-gray-800 leading-relaxed">
             <p>
               <strong className="text-black font-extrabold">Clarvé</strong> is a research-driven marketing agency built for the founders America overlooks:{" "}
@@ -36,11 +36,18 @@ const BuildingSection = () => {
               searching online before stepping through a door, a weak digital presence doesn't just cost clicks. It costs customers.
             </p>
             <p>
-              The gap isn't talent. It's <strong className="text-black font-extrabold">visibility</strong>. <strong className="text-black font-extrabold">Clarvé</strong> exists to close it.
+              The gap isn't talent. It's <strong className="text-black font-extrabold">visibility</strong>. Clarvé exists to close it.
             </p>
           </div>
 
           <div className="space-y-4">
+            {/* Added Image Here */}
+            <img 
+              src={buildingImg} 
+              alt="Clarvé Vision" 
+              className="w-full h-64 object-cover rounded-lg shadow-sm border border-border"
+            />
+
             <div className="p-6 rounded-lg border border-border bg-background">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center">
@@ -72,18 +79,5 @@ const BuildingSection = () => {
               </ul>
             </div>
             <div className="p-5 rounded-lg border border-primary/20 bg-primary/5">
-              <p className="text-xs font-medium tracking-widest uppercase text-primary mb-1">
-                Status
-              </p>
-              <p className="text-sm font-extrabold text-black">
-                In Development — Launching Soon
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
+              <p className="text
 export default BuildingSection;
