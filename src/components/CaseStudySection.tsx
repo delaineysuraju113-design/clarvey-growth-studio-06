@@ -1,4 +1,5 @@
 import { ArrowUpRight, TrendingUp, BarChart3, Target } from "lucide-react";
+import adomImg from "@/assets/480687095_122192720432168223_1119427440004990007_n (1).jpg";
 
 const CaseStudySection = () => {
   return (
@@ -26,24 +27,35 @@ const CaseStudySection = () => {
         </p>
 
         <div className="grid md:grid-cols-2 gap-12 items-start">
-          <div className="space-y-6 text-gray-100 leading-relaxed">
-            <p>
-              <strong className="text-white font-extrabold">Adom African Market</strong> is a family-owned shop stocked with authentic West African staples — goat meat, stockfish, specialty flours, spices, and cultural goods. The store earned a loyal community through trust, but its digital presence didn't match the strength of the business.
-            </p>
-            <p>
-              <strong className="text-white font-extrabold">Clarvé</strong> is leading a full marketing transformation: brand positioning, a new website with SEO-optimized inventory and local delivery, social media growth, and customer acquisition campaigns — all built to expand reach without losing cultural identity.
-            </p>
-            <p>
-              This is Clarvé's <strong className="text-white font-extrabold">anchor case study</strong> — proof of what happens when overlooked businesses finally get the <strong className="text-white font-extrabold">visibility</strong> they've earned.
-            </p>
-            <p>
-              <span className="inline-flex items-center gap-2.5 text-base font-extrabold text-accent mt-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-accent animate-pulse" />
-                Live project — ongoing
-              </span>
-            </p>
+          {/* Left Column: Text + Image (Balanced Layout) */}
+          <div className="flex flex-col gap-8">
+            <div className="space-y-6 text-gray-100 leading-relaxed">
+              <p>
+                <strong className="text-white font-extrabold">Adom African Market</strong> is a family-owned shop stocked with authentic West African staples — goat meat, stockfish, specialty flours, spices, and cultural goods. The store earned a loyal community through trust, but its digital presence didn't match the strength of the business.
+              </p>
+              <p>
+                <strong className="text-white font-extrabold">Clarvé</strong> is leading a full marketing transformation: brand positioning, a new website with SEO-optimized inventory and local delivery, social media growth, and customer acquisition campaigns — all built to expand reach without losing cultural identity.
+              </p>
+              <p>
+                This is Clarvé's <strong className="text-white font-extrabold">anchor case study</strong> — proof of what happens when overlooked businesses finally get the <strong className="text-white font-extrabold">visibility</strong> they've earned.
+              </p>
+              <p>
+                <span className="inline-flex items-center gap-2.5 text-base font-extrabold text-accent mt-2">
+                  <span className="w-2.5 h-2.5 rounded-full bg-accent animate-pulse" />
+                  Live project — ongoing
+                </span>
+              </p>
+            </div>
+
+            {/* Added Image Here to balance the taller right column */}
+            <img 
+              src={adomImg} 
+              alt="Adom African Market" 
+              className="w-full h-64 md:h-72 object-cover rounded-lg shadow-sm border border-white/20"
+            />
           </div>
 
+          {/* Right Column: Execution + Metrics */}
           <div className="space-y-5">
             <h3 className="text-xs font-bold tracking-widest uppercase text-gray-200 mb-1">
               What I'm Executing
@@ -76,7 +88,7 @@ const CaseStudySection = () => {
               </span>
             </div>
 
-            {/* Metrics placeholder */}
+            {/* Metrics */}
             <div className="mt-6 grid grid-cols-3 gap-3">
               {[
                 { label: "Phase", value: "Active" },
