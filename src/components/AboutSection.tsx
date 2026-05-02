@@ -16,7 +16,7 @@ const AboutSection = () => {
           <div className="space-y-6 text-gray-800 leading-relaxed">
             <p>
               I'm Delainey Suraju, a senior student-athlete at the{" "}
-              <strong className="text-black font-extrabold">University of St. Thomas</strong>, finishing a degree in Business Management with a minor in Psychology. As the son of{" "}
+              <strong className="text-black font-extrabold">University of St. Thomas</strong>, finishing a degree in Business Management with a Minor in Psychology. As the son of{" "}
               <strong className="text-black font-extrabold">Ghanaian immigrants</strong>, I was shaped by my parents' discipline, resilience, and faith to build something for me and my two siblings — that same foundation is what drove me to walk on as an undersized{" "}
               <strong className="text-black font-extrabold">Division I defensive lineman</strong>. Through resilience and perseverance, I ended up beating the odds and finished my career with{" "}
               <strong className="text-black font-extrabold">14 games played, 15 tackles, a forced fumble, and a fumble recovery</strong>.
