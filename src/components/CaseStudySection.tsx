@@ -31,15 +31,15 @@ const CaseStudySection = () => {
           <div className="flex flex-col gap-8">
             {/* Reduced from space-y-6 to space-y-4 right here! */}
             <div className="space-y-4 text-gray-100 leading-relaxed">
-              <p>
-                <strong className="text-white font-extrabold">Adom African Market</strong> is a family-owned shop stocked with authentic West African staples — goat meat, stockfish, specialty flours, spices, and cultural goods. The store earned a loyal community through trust, but its digital presence didn't match the strength of the business.
-              </p>
-              <p>
-                <strong className="text-white font-extrabold">Clarvé</strong> is leading a full marketing transformation: brand positioning, a new website with SEO-optimized inventory and local delivery, social media growth, and customer acquisition campaigns — all built to expand reach without losing cultural identity.
-              </p>
-              <p>
-                This is Clarvé's <strong className="text-white font-extrabold">anchor case study</strong> — proof of what happens when overlooked businesses finally get the <strong className="text-white font-extrabold">visibility</strong> they've earned.
-              </p>
+             <p>
+  <strong className="text-white font-extrabold">Adom African Market</strong> is a family-owned grocery store stocked with West African staples — goat meat, stockfish, specialty flours, spices, and cultural snacks. Built on trust and close relationships, the people who walk through its doors aren't customers — they're family. But even with that loyal community, its digital presence didn't match the strength of the business.
+</p>
+<p>
+  <strong className="text-white font-extrabold">Clarvé</strong> is leading a full marketing transformation — brand positioning, a new website, local delivery, social media growth, and customer acquisition — all built to expand reach without losing cultural identity.
+</p>
+<p>
+  This is Clarvé's <strong className="text-white font-extrabold">anchor case study</strong> — proof of what happens when overlooked businesses finally get the <strong className="text-white font-extrabold">visibility</strong> they've earned.
+</p>
               <p>
                 <span className="inline-flex items-center gap-2.5 text-base font-extrabold text-accent mt-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-accent animate-pulse" />
