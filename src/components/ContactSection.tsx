@@ -60,48 +60,62 @@ const ContactSection = () => {
 
           {/* Right Column: Form */}
           <div className="bg-card p-8 rounded-xl border border-border shadow-sm">
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-              <div>
-                <label htmlFor="name" className="block text-sm font-bold text-foreground mb-2">
-                  NAME
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  placeholder="Your Name"
-                  className="w-full px-4 py-3 rounded-md border border-border bg-background focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors"
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-bold text-foreground mb-2">
-                  EMAIL
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  placeholder="your@email.com"
-                  className="w-full px-4 py-3 rounded-md border border-border bg-background focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors"
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-bold text-foreground mb-2">
-                  MESSAGE
-                </label>
-                <textarea
-                  id="message"
-                  rows={4}
-                  placeholder="How can I help you?"
-                  className="w-full px-4 py-3 rounded-md border border-border bg-background focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors resize-none"
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 rounded-md bg-[#2B4A37] text-white font-medium hover:opacity-90 transition-opacity"
-              >
-                Send Message
-                <Send size={16} />
-              </button>
-            </form>
+           <form action="https://formsubmit.co/delaineysuraju113@gmail.com" method="POST" className="space-y-6">
+            
+            {/* FormSubmit Configuration */}
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="text" name="_honey" style={{ display: 'none' }} />
+            <input type="hidden" name="_next" value="https://delainey-portfolio.vercel.app/" />
+
+            <div>
+              <label htmlFor="name" className="block text-sm font-bold text-foreground mb-2">
+                NAME
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Your Name"
+                className="w-full px-4 py-3 rounded-md border border-border bg-background focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="email" className="block text-sm font-bold text-foreground mb-2">
+                EMAIL
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="your@email.com"
+                className="w-full px-4 py-3 rounded-md border border-border bg-background focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="message" className="block text-sm font-bold text-foreground mb-2">
+                MESSAGE
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                rows={4}
+                placeholder="How can I help you?"
+                className="w-full px-4 py-3 rounded-md border border-border bg-background focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors resize-none"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 rounded-md bg-[#2B4A37] text-white font-medium hover:opacity-90 transition-opacity"
+            >
+              Send Message <Send size={16} />
+            </button>
+          </form>
           </div>
         </div>
       </div>
