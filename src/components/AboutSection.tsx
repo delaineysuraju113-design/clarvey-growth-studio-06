@@ -13,21 +13,24 @@ const AboutSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-start mt-8">
           {/* Story column */}
-          <div className="space-y-6 text-gray-800 leading-relaxed">
-            <p>
-              I'm Delainey Suraju, a senior student-athlete at the{" "}
-              <strong className="text-black font-extrabold">University of St. Thomas</strong>, finishing a degree in Business Management with a Minor in Psychology. As the son of{" "}
-              <strong className="text-black font-extrabold">Ghanaian immigrants</strong>, I was shaped by my parents' discipline, resilience, and faith to build something for me and my two siblings — that same foundation is what drove me to walk on as an undersized{" "}
-              <strong className="text-black font-extrabold">Division I defensive lineman</strong>. Through resilience and perseverance, I ended up beating the odds and finished my career with{" "}
-              <strong className="text-black font-extrabold">14 games played, 15 tackles, a forced fumble, and a fumble recovery</strong>.
-            </p>
-            <p>
-              Today, I'm starting my career at{" "}
-              <strong className="text-black font-extrabold">Insight Global</strong>{" "}
-              while building{" "}
-              <strong className="text-black font-extrabold">Clarvé</strong>, a research-driven marketing brand helping  <strong className="text-black font-extrabold">immigrant, women, and underrepresented founders</strong> grow beyond their initial communities. I'm focused on building something greater than myself — for my family, my community, and the generations to come.
-            </p>
-          </div>
+        <div className="space-y-6 text-gray-800 leading-relaxed">
+  <p>
+    I'm Delainey Suraju, a senior student-athlete at the{" "}
+    <strong className="text-black font-extrabold">University of St. Thomas</strong>, finishing a degree in Business Management with a Minor in Psychology. As the son of{" "}
+    <strong className="text-black font-extrabold">Ghanaian immigrants</strong>, I was shaped by my parents' discipline, resilience, and faith to build something for me and my two siblings — that same foundation is what drove me to walk on as an{" "}
+    <strong className="text-black font-extrabold">undersized Division I defensive lineman</strong>. Through resilience and perseverance, I ended up{" "}
+    <strong className="text-black font-extrabold">beating the odds</strong> and finished my career with 14 games played, 15 tackles, a forced fumble, and a fumble recovery.
+  </p>
+
+  <p>
+    Today, I'm starting my career at{" "}
+    <strong className="text-black font-extrabold">Insight Global</strong>{" "}
+    while building{" "}
+    <strong className="text-black font-extrabold">Clarvé</strong>, a{" "}
+    <strong className="text-black font-extrabold">research-driven marketing brand</strong> helping immigrant, women, and underrepresented founders grow beyond their initial communities. I'm focused on{" "}
+    <strong className="text-black font-extrabold">building something greater than myself</strong> — for my family, my community, and the generations to come.
+  </p>
+</div>
 
           {/* Photo column */}
           <div>
