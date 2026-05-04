@@ -96,22 +96,21 @@ const CaseStudySection = () => {
               ))}
             </div>
 
-            {/* Survey Link Section */}
-            <div className="mt-8 pt-6 border-t border-white/20">
-              <p className="text-sm md:text-base text-gray-200">
-                Want to be a part of this and help out?{" "}
-                <a 
-                  href="https://adom-market-survey.vercel.app/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="font-extrabold text-white underline decoration-2 underline-offset-4 hover:text-accent transition-colors inline-flex items-center gap-1"
-                >
-                  Fill out this survey
-                  <span aria-hidden="true" className="text-lg leading-none text-accent">&rarr;</span>
-                </a>
+           {/* Survey Link Section */}
+            <div className="mt-8 p-5 rounded-lg border border-white/20 bg-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <p className="text-sm md:text-base text-white font-semibold m-0">
+                Want to be a part of this and help out?
               </p>
+              <a 
+                href="https://adom-market-survey.vercel.app/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 bg-white text-[#2B4A37] font-extrabold rounded-md hover:bg-gray-200 transition-colors text-sm shadow-sm"
+              >
+                Take the Survey
+                <ArrowUpRight size={16} />
+              </a>
             </div>
-
           </div>
         </div>
       </div>
