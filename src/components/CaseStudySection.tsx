@@ -115,5 +115,49 @@ const CaseStudySection = () => {
     </section>
   );
 };
+{/* Metrics */}
+            <div className="mt-6 grid grid-cols-3 gap-3">
+              {[
+                { label: "Phase", value: "Active" },
+                { label: "Focus", value: "Growth" },
+                { label: "Results", value: "Tracking" },
+              ].map((metric) => (
+                <div
+                  key={metric.label}
+                  className="text-center p-4 rounded-lg bg-white/10 border border-white/20"
+                >
+                  <p className="text-lg font-heading font-extrabold text-white">
+                    {metric.value}
+                  </p>
+                  <p className="text-[10px] uppercase tracking-widest text-gray-200 mt-1">
+                    {metric.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* ---> PASTE THE NEW SURVEY LINK CODE EXACTLY HERE <--- */}
+            <div className="mt-8 pt-6 border-t border-white/20">
+              <p className="text-sm md:text-base text-gray-200">
+                Want to be a part of this and help out?{" "}
+                <a 
+                  href="https://adom-market-survey.vercel.app/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="font-extrabold text-white underline decoration-2 underline-offset-4 hover:text-accent transition-colors inline-flex items-center gap-1"
+                >
+                  Fill out this survey
+                  <span aria-hidden="true" className="text-lg leading-none text-accent">&rarr;</span>
+                </a>
+              </p>
+            </div>
+            {/* ---> END OF PASTED CODE <--- */}
+
+          </div> {/* This is the closing div for the Right Column */}
+        </div> {/* This is the closing div for the main grid */}
+      </div> 
+    </section>
+  );
+};
 
 export default CaseStudySection;
