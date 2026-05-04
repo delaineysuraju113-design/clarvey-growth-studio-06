@@ -23,7 +23,7 @@ const CaseStudySection = () => {
           </span>
         </div>
         <p className="text-gray-100 max-w-2xl mb-12 leading-relaxed text-base">
-          A real-world business transformation — not a class project. This is where strategy meets execution.
+         Real business transformation for Clarvé.
         </p>
 
         <div className="grid md:grid-cols-2 gap-12 items-start">
