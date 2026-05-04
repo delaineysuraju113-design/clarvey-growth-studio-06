@@ -22,9 +22,9 @@ const CaseStudySection = () => {
             <span className="text-white font-extrabold">Type ·</span> Family-Owned Business
           </span>
         </div>
-        <p className="text-gray-100 max-w-2xl mb-12 leading-relaxed text-base">
-         Real business transformation for Clarvé.
-        </p>
+       <p className="text-gray-100 max-w-2xl mb-6 leading-relaxed text-base">
+  Real business transformation for Clarvé.
+</p>
 
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Left Column: Text + Image (Balanced Layout) */}
