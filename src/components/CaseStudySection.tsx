@@ -30,7 +30,7 @@ const CaseStudySection = () => {
           {/* Left Column: Text + Image (Balanced Layout) */}
           <div className="flex flex-col gap-8">
             {/* Reduced from space-y-6 to space-y-4 right here! */}
-            <div className="space-y-4 text-gray-100 leading-relaxed">
+            <div className="space-y-2 text-gray-100 leading-relaxed">
              <p>
   <strong className="text-white font-extrabold">Adom African Market</strong> is a family-owned grocery store stocked with West African staples — goat meat, stockfish, specialty flours, spices, and cultural snacks. Built on trust and close relationships, the people who walk through its doors aren't customers — they're family. But even with that loyal community, its digital presence didn't match the strength of the business.
 </p>
