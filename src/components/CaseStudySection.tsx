@@ -11,6 +11,7 @@ const CaseStudySection = () => {
         <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-4">
           Adom African Market
         </h2>
+
         <div className="flex flex-wrap gap-x-6 gap-y-1 mb-8 text-sm text-gray-100">
           <span>
             <span className="text-white font-extrabold">Location ·</span> Minnesota, USA
@@ -22,24 +23,24 @@ const CaseStudySection = () => {
             <span className="text-white font-extrabold">Type ·</span> Family-Owned Business
           </span>
         </div>
-       <p className="text-gray-100 max-w-2xl mb-6 leading-relaxed text-base">
-  Real business transformation for Clarvé.
-</p>
+
+        <p className="text-gray-100 max-w-2xl mb-6 leading-relaxed text-base">
+          Real business transformation for Clarvé.
+        </p>
 
         <div className="grid md:grid-cols-2 gap-12 items-start">
-          {/* Left Column: Text + Image (Balanced Layout) */}
+          {/* Left Column: Text + Image */}
           <div className="flex flex-col gap-8">
-            {/* Reduced from space-y-6 to space-y-4 right here! */}
             <div className="space-y-2 text-gray-100 leading-relaxed">
-             <p>
-  <strong className="text-white font-extrabold">Adom African Market</strong> is a family-owned grocery store stocked with West African staples — goat meat, stockfish, specialty flours, spices, and cultural snacks. Built on trust and close relationships, the people who walk through its doors aren't customers — they're family. But even with that loyal community, its digital presence didn't match the strength of the business.
-</p>
-<p>
-  <strong className="text-white font-extrabold">Clarvé</strong> is leading a full marketing transformation — brand positioning, a new website, local delivery, social media growth, and customer acquisition — all built to expand reach without losing cultural identity.
-</p>
-<p>
-  This is Clarvé's <strong className="text-white font-extrabold">anchor case study</strong> — proof of what happens when overlooked businesses finally get the <strong className="text-white font-extrabold">visibility</strong> they've earned.
-</p>
+              <p>
+                <strong className="text-white font-extrabold">Adom African Market</strong> is a family-owned grocery store stocked with West African staples — goat meat, stockfish, specialty flours, spices, and cultural snacks. Built on trust and close relationships, the people who walk through its doors aren't customers — they're family. But even with that loyal community, its digital presence didn't match the strength of the business.
+              </p>
+              <p>
+                <strong className="text-white font-extrabold">Clarvé</strong> is leading a full marketing transformation — brand positioning, a new website, local delivery, social media growth, and customer acquisition — all built to expand reach without losing cultural identity.
+              </p>
+              <p>
+                This is Clarvé's <strong className="text-white font-extrabold">anchor case study</strong> — proof of what happens when overlooked businesses finally get the <strong className="text-white font-extrabold">visibility</strong> they've earned.
+              </p>
               <p>
                 <span className="inline-flex items-center gap-2.5 text-base font-extrabold text-accent mt-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-accent animate-pulse" />
@@ -47,8 +48,7 @@ const CaseStudySection = () => {
                 </span>
               </p>
             </div>
-
-            {/* Added Image Here to balance the taller right column */}
+            
             <img 
               src={adomImg} 
               alt="Adom African Market" 
@@ -61,32 +61,25 @@ const CaseStudySection = () => {
             <h3 className="text-xs font-bold tracking-widest uppercase text-gray-200 mb-1">
               What I'm Executing
             </h3>
+            
             {[
               { icon: Target, text: "Brand positioning & messaging strategy" },
               { icon: BarChart3, text: "Social media content & growth" },
               { icon: TrendingUp, text: "Customer acquisition campaigns" },
             ].map((item) => (
-              <div
-                key={item.text}
-                className="flex items-center gap-4 py-3 border-b border-white/20"
-              >
+              <div key={item.text} className="flex items-center gap-4 py-3 border-b border-white/20">
                 <item.icon size={18} className="text-accent shrink-0" />
-                <span className="text-sm text-white font-semibold">
-                  {item.text}
-                </span>
+                <span className="text-sm text-white font-semibold">{item.text}</span>
               </div>
             ))}
+            
             <div className="flex items-center gap-4 py-3 border-b border-white/20">
               <ArrowUpRight size={18} className="text-accent shrink-0" />
-              <span className="text-sm text-white font-semibold">
-                Website design & development
-              </span>
+              <span className="text-sm text-white font-semibold">Website design & development</span>
             </div>
             <div className="flex items-center gap-4 py-3">
               <ArrowUpRight size={18} className="text-accent shrink-0" />
-              <span className="text-sm text-white font-semibold">
-                Long-term growth strategy & reporting
-              </span>
+              <span className="text-sm text-white font-semibold">Long-term growth strategy & reporting</span>
             </div>
 
             {/* Metrics */}
@@ -96,47 +89,14 @@ const CaseStudySection = () => {
                 { label: "Focus", value: "Growth" },
                 { label: "Results", value: "Tracking" },
               ].map((metric) => (
-                <div
-                  key={metric.label}
-                  className="text-center p-4 rounded-lg bg-white/10 border border-white/20"
-                >
-                  <p className="text-lg font-heading font-extrabold text-white">
-                    {metric.value}
-                  </p>
-                  <p className="text-[10px] uppercase tracking-widest text-gray-200 mt-1">
-                    {metric.label}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-{/* Metrics */}
-            <div className="mt-6 grid grid-cols-3 gap-3">
-              {[
-                { label: "Phase", value: "Active" },
-                { label: "Focus", value: "Growth" },
-                { label: "Results", value: "Tracking" },
-              ].map((metric) => (
-                <div
-                  key={metric.label}
-                  className="text-center p-4 rounded-lg bg-white/10 border border-white/20"
-                >
-                  <p className="text-lg font-heading font-extrabold text-white">
-                    {metric.value}
-                  </p>
-                  <p className="text-[10px] uppercase tracking-widest text-gray-200 mt-1">
-                    {metric.label}
-                  </p>
+                <div key={metric.label} className="text-center p-4 rounded-lg bg-white/10 border border-white/20">
+                  <p className="text-lg font-heading font-extrabold text-white">{metric.value}</p>
+                  <p className="text-[10px] uppercase tracking-widest text-gray-200 mt-1">{metric.label}</p>
                 </div>
               ))}
             </div>
 
-            {/* ---> PASTE THE NEW SURVEY LINK CODE EXACTLY HERE <--- */}
+            {/* Survey Link Section */}
             <div className="mt-8 pt-6 border-t border-white/20">
               <p className="text-sm md:text-base text-gray-200">
                 Want to be a part of this and help out?{" "}
@@ -151,11 +111,10 @@ const CaseStudySection = () => {
                 </a>
               </p>
             </div>
-            {/* ---> END OF PASTED CODE <--- */}
 
-          </div> {/* This is the closing div for the Right Column */}
-        </div> {/* This is the closing div for the main grid */}
-      </div> 
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
