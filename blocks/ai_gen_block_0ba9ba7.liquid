@@ -1,0 +1,987 @@
+{% doc %}
+  @prompt
+    help Create a highly structured, clean, and modern product grid category section for my product meats & seafoods. cean simple and acces to add photos for each one. Ensure the entire section scales beautifully to fit the screen edge-to-edge without overflowing. Price is placed directly below image with breathing room, product title is bold and highly ledgible font place right under price and a "buy now" button perfeclty centered with rounded corners matching a clean minimilist retail style. heres the list of products Meats & Seafood Product List
+    Dry Fish: $8.99
+    
+    Croaker Fish: $4.99
+    
+    Cow Skin: $7.99
+    
+    Dry Smoked Fish: $8.99
+    
+    Fresh Shrimp: $16.99
+    
+    Frozen Snails: $15.99
+    
+    Goat Meat Cube: $17.99
+    
+    Golden Pompano: $4.99
+    
+    Mackerel Fish: $5.99
+    
+    Red Snapper: $9.99
+    
+    Snails: $15.99
+    
+    Tilapia: $3.50
+    
+    Beef Soup Bone: $7.99, this looks nice. now just make each a box and section bigger. it can take up more space. make sure it looks well for phone use aswell, its even smaller then before now. make the width bigger , center this section in the middle of the page, make the box less vertically long and make it look more profesonal. and then make sure it looks well on iphone view aswell , expand thw width of each product section just a little bit bigger. its too verticle right now, Expand the overall section layout width so it fills the screen cleanly like a standard wide collection page.
+    
+    Crucially, fix the height of the product cards: they are too stretched out and vertical right now. Shorten the vertical height of the image placeholders to a clean, compact square (1:1 ratio) or slight landscape rectangle. The cards should look shorter vertically and wider horizontally so they look professional and balanced on both desktop rows and iPhone views, instead of looking like tall blocks., Constrain the maximum width of this entire section to match the theme's standard page container exactly. The outermost left and right edges of this product grid must align perfectly flush (vertically) with the website's main content layout boundaries, matching the header. Center the entire section on the page so it is perfectly balanced and no longer looks detached from the rest of the layout, efactor this block's Liquid and schema code to expose manual theme settings in my Shopify sidebar menu.
+    
+    Add manual custom fields for:
+    
+    A 'Section Max-Width' slider/input so I can manually expand or contract the width.
+    
+    A 'Card Aspect Ratio' or 'Image Height' control., make image space bigger, make image width bigger 
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-product-grid-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    padding: {{ block.settings.section_padding_top }}px 0 {{ block.settings.section_padding_bottom }}px;
+    background-color: {{ block.settings.background_color }};
+  }
+
+  .ai-product-grid-container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.section_max_width }}px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .ai-product-grid-header-{{ ai_gen_id }} {
+    text-align: center;
+    margin-bottom: {{ block.settings.header_spacing }}px;
+  }
+
+  .ai-product-grid-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    font-weight: 700;
+    color: {{ block.settings.title_color }};
+    margin: 0 0 12px;
+    letter-spacing: -0.5px;
+  }
+
+  .ai-product-grid-description-{{ ai_gen_id }} {
+    font-size: {{ block.settings.description_size }}px;
+    color: {{ block.settings.description_color }};
+    margin: 0;
+    opacity: 0.85;
+  }
+
+  .ai-product-grid-items-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat({{ block.settings.columns_desktop }}, 1fr);
+    gap: {{ block.settings.grid_gap }}px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .ai-product-card-{{ ai_gen_id }} {
+    background-color: {{ block.settings.card_background }};
+    border-radius: {{ block.settings.card_border_radius }}px;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border: {{ block.settings.card_border_width }}px solid {{ block.settings.card_border_color }};
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ai-product-card-{{ ai_gen_id }}:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .ai-product-image-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    padding-bottom: {{ block.settings.image_aspect_ratio }}%;
+    background-color: #f9f9f9;
+    overflow: hidden;
+  }
+
+  .ai-product-image-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-product-image-placeholder-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+  }
+
+  .ai-product-image-placeholder-{{ ai_gen_id }} svg {
+    width: 60%;
+    height: 60%;
+    opacity: 0.2;
+  }
+
+  .ai-product-info-{{ ai_gen_id }} {
+    padding: {{ block.settings.card_padding }}px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ai-product-price-{{ ai_gen_id }} {
+    font-size: {{ block.settings.price_size }}px;
+    font-weight: 700;
+    color: {{ block.settings.price_color }};
+    margin: 0 0 {{ block.settings.price_spacing }}px;
+    letter-spacing: -0.3px;
+  }
+
+  .ai-product-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.product_title_size }}px;
+    font-weight: 600;
+    color: {{ block.settings.product_title_color }};
+    margin: 0 0 {{ block.settings.title_spacing }}px;
+    line-height: 1.3;
+    min-height: 2.6em;
+  }
+
+  .ai-product-button-{{ ai_gen_id }} {
+    display: inline-block;
+    width: 100%;
+    padding: {{ block.settings.button_padding_vertical }}px {{ block.settings.button_padding_horizontal }}px;
+    background-color: {{ block.settings.button_background }};
+    color: {{ block.settings.button_text_color }};
+    border: none;
+    border-radius: {{ block.settings.button_border_radius }}px;
+    font-size: {{ block.settings.button_font_size }}px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+    letter-spacing: 0.3px;
+  }
+
+  .ai-product-button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_background }};
+    transform: translateY(-1px);
+  }
+
+  @media screen and (max-width: 989px) {
+    .ai-product-grid-container-{{ ai_gen_id }} {
+      padding: 0 16px;
+    }
+
+    .ai-product-grid-items-{{ ai_gen_id }} {
+      grid-template-columns: repeat({{ block.settings.columns_tablet }}, 1fr);
+      gap: {{ block.settings.grid_gap | times: 0.8 }}px;
+    }
+
+    .ai-product-grid-title-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.title_size }}px * 0.75);
+    }
+
+    .ai-product-grid-description-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.description_size }}px * 0.9);
+    }
+
+    .ai-product-image-wrapper-{{ ai_gen_id }} {
+      padding-bottom: {{ block.settings.image_aspect_ratio | plus: 15 }}%;
+    }
+
+    .ai-product-image-placeholder-{{ ai_gen_id }} svg {
+      width: 65%;
+      height: 65%;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-product-grid-container-{{ ai_gen_id }} {
+      padding: 0 12px;
+    }
+
+    .ai-product-grid-items-{{ ai_gen_id }} {
+      grid-template-columns: repeat(2, 1fr);
+      gap: {{ block.settings.grid_gap | times: 0.6 }}px;
+    }
+
+    .ai-product-grid-title-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.title_size }}px * 0.6);
+    }
+
+    .ai-product-grid-description-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.description_size }}px * 0.85);
+    }
+
+    .ai-product-card-{{ ai_gen_id }} {
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    }
+
+    .ai-product-card-{{ ai_gen_id }}:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    }
+
+    .ai-product-info-{{ ai_gen_id }} {
+      padding: {{ block.settings.card_padding | times: 0.7 }}px;
+    }
+
+    .ai-product-price-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.price_size }}px * 0.85);
+      margin-bottom: {{ block.settings.price_spacing | times: 0.7 }}px;
+    }
+
+    .ai-product-title-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.product_title_size }}px * 0.85);
+      margin-bottom: {{ block.settings.title_spacing | times: 0.7 }}px;
+      min-height: 2.4em;
+    }
+
+    .ai-product-button-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.button_font_size }}px * 0.9);
+      padding: calc({{ block.settings.button_padding_vertical }}px * 0.85) calc({{ block.settings.button_padding_horizontal }}px * 0.85);
+    }
+
+    .ai-product-image-wrapper-{{ ai_gen_id }} {
+      padding-bottom: 115%;
+    }
+
+    .ai-product-image-placeholder-{{ ai_gen_id }} svg {
+      width: 70%;
+      height: 70%;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-product-grid-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-product-grid-container-{{ ai_gen_id }}">
+    {% if block.settings.section_title != blank or block.settings.section_description != blank %}
+      <div class="ai-product-grid-header-{{ ai_gen_id }}">
+        {% if block.settings.section_title != blank %}
+          <h2 class="ai-product-grid-title-{{ ai_gen_id }}">{{ block.settings.section_title }}</h2>
+        {% endif %}
+        {% if block.settings.section_description != blank %}
+          <p class="ai-product-grid-description-{{ ai_gen_id }}">{{ block.settings.section_description }}</p>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="ai-product-grid-items-{{ ai_gen_id }}">
+      {% for i in (1..13) %}
+        {% liquid
+          assign product_image_key = 'product_' | append: i | append: '_image'
+          assign product_title_key = 'product_' | append: i | append: '_title'
+          assign product_price_key = 'product_' | append: i | append: '_price'
+          assign product_url_key = 'product_' | append: i | append: '_url'
+
+          assign product_image = block.settings[product_image_key]
+          assign product_title = block.settings[product_title_key]
+          assign product_price = block.settings[product_price_key]
+          assign product_url = block.settings[product_url_key]
+        %}
+
+        <div class="ai-product-card-{{ ai_gen_id }}">
+          <div class="ai-product-image-wrapper-{{ ai_gen_id }}">
+            {% if product_image %}
+              <img
+                src="{{ product_image | image_url: width: 800 }}"
+                alt="{{ product_title | escape }}"
+                loading="lazy"
+                width="800"
+                height="680"
+                class="ai-product-image-{{ ai_gen_id }}"
+              >
+            {% else %}
+              <div class="ai-product-image-placeholder-{{ ai_gen_id }}">
+                {{ 'product-1' | placeholder_svg_tag }}
+              </div>
+            {% endif %}
+          </div>
+
+          <div class="ai-product-info-{{ ai_gen_id }}">
+            {% if product_price != blank %}
+              <div class="ai-product-price-{{ ai_gen_id }}">${{ product_price }}</div>
+            {% endif %}
+
+            {% if product_title != blank %}
+              <h3 class="ai-product-title-{{ ai_gen_id }}">{{ product_title }}</h3>
+            {% endif %}
+
+            <a
+              href="{% if product_url != blank %}{{ product_url }}{% else %}#{% endif %}"
+              class="ai-product-button-{{ ai_gen_id }}"
+            >
+              {{ block.settings.button_text }}
+            </a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Meats & seafood grid",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section header"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Title",
+      "default": "Meats & Seafood"
+    },
+    {
+      "type": "text",
+      "id": "section_description",
+      "label": "Description",
+      "default": "Fresh quality meats and seafood"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "Title size",
+      "min": 28,
+      "max": 72,
+      "step": 2,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "description_size",
+      "label": "Description size",
+      "min": 14,
+      "max": 28,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#1b1410"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description color",
+      "default": "#1b1410"
+    },
+    {
+      "type": "range",
+      "id": "header_spacing",
+      "label": "Header spacing",
+      "min": 24,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "section_max_width",
+      "label": "Section max width",
+      "min": 800,
+      "max": 1600,
+      "step": 50,
+      "unit": "px",
+      "default": 1200
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "label": "Columns on desktop",
+      "min": 2,
+      "max": 6,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "columns_tablet",
+      "label": "Columns on tablet",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "grid_gap",
+      "label": "Grid gap",
+      "min": 16,
+      "max": 64,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "label": "Top padding",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 64
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#fff8ee"
+    },
+    {
+      "type": "header",
+      "content": "Product cards"
+    },
+    {
+      "type": "range",
+      "id": "image_aspect_ratio",
+      "label": "Image aspect ratio",
+      "min": 60,
+      "max": 150,
+      "step": 5,
+      "unit": "%",
+      "default": 110
+    },
+    {
+      "type": "color",
+      "id": "card_background",
+      "label": "Card background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "card_border_radius",
+      "label": "Card border radius",
+      "min": 0,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "card_border_width",
+      "label": "Card border width",
+      "min": 0,
+      "max": 3,
+      "step": 1,
+      "unit": "px",
+      "default": 1
+    },
+    {
+      "type": "color",
+      "id": "card_border_color",
+      "label": "Card border color",
+      "default": "#e6e6e6"
+    },
+    {
+      "type": "range",
+      "id": "card_padding",
+      "label": "Card padding",
+      "min": 12,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Product info"
+    },
+    {
+      "type": "range",
+      "id": "price_size",
+      "label": "Price size",
+      "min": 16,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "color",
+      "id": "price_color",
+      "label": "Price color",
+      "default": "#c2410c"
+    },
+    {
+      "type": "range",
+      "id": "price_spacing",
+      "label": "Price spacing",
+      "min": 6,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "product_title_size",
+      "label": "Title size",
+      "min": 14,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "product_title_color",
+      "label": "Title color",
+      "default": "#1b1410"
+    },
+    {
+      "type": "range",
+      "id": "title_spacing",
+      "label": "Title spacing",
+      "min": 10,
+      "max": 28,
+      "step": 2,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Buy Now"
+    },
+    {
+      "type": "range",
+      "id": "button_padding_vertical",
+      "label": "Vertical padding",
+      "min": 8,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "button_padding_horizontal",
+      "label": "Horizontal padding",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "button_font_size",
+      "label": "Font size",
+      "min": 12,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "color",
+      "id": "button_background",
+      "label": "Background",
+      "default": "#c2410c"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_background",
+      "label": "Hover background",
+      "default": "#333333"
+    },
+    {
+      "type": "header",
+      "content": "Product 1 - Dry Fish"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_1_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "product_1_title",
+      "label": "Title",
+      "default": "Dry Fish"
+    },
+    {
+      "type": "text",
+      "id": "product_1_price",
+      "label": "Price",
+      "default": "8.99"
+    },
+    {
+      "type": "url",
+      "id": "product_1_url",
+      "label": "Product link"
+    },
+    {
+      "type": "header",
+      "content": "Product 2 - Croaker Fish"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_2_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "product_2_title",
+      "label": "Title",
+      "default": "Croaker Fish"
+    },
+    {
+      "type": "text",
+      "id": "product_2_price",
+      "label": "Price",
+      "default": "4.99"
+    },
+    {
+      "type": "url",
+      "id": "product_2_url",
+      "label": "Product link"
+    },
+    {
+      "type": "header",
+      "content": "Product 3 - Cow Skin"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_3_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "product_3_title",
+      "label": "Title",
+      "default": "Cow Skin"
+    },
+    {
+      "type": "text",
+      "id": "product_3_price",
+      "label": "Price",
+      "default": "7.99"
+    },
+    {
+      "type": "url",
+      "id": "product_3_url",
+      "label": "Product link"
+    },
+    {
+      "type": "header",
+      "content": "Product 4 - Dry Smoked Fish"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_4_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "product_4_title",
+      "label": "Title",
+      "default": "Dry Smoked Fish"
+    },
+    {
+      "type": "text",
+      "id": "product_4_price",
+      "label": "Price",
+      "default": "8.99"
+    },
+    {
+      "type": "url",
+      "id": "product_4_url",
+      "label": "Product link"
+    },
+    {
+      "type": "header",
+      "content": "Product 5 - Fresh Shrimp"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_5_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "product_5_title",
+      "label": "Title",
+      "default": "Fresh Shrimp"
+    },
+    {
+      "type": "text",
+      "id": "product_5_price",
+      "label": "Price",
+      "default": "16.99"
+    },
+    {
+      "type": "url",
+      "id": "product_5_url",
+      "label": "Product link"
+    },
+    {
+      "type": "header",
+      "content": "Product 6 - Frozen Snails"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_6_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "product_6_title",
+      "label": "Title",
+      "default": "Frozen Snails"
+    },
+    {
+      "type": "text",
+      "id": "product_6_price",
+      "label": "Price",
+      "default": "15.99"
+    },
+    {
+      "type": "url",
+      "id": "product_6_url",
+      "label": "Product link"
+    },
+    {
+      "type": "header",
+      "content": "Product 7 - Goat Meat Cube"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_7_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "product_7_title",
+      "label": "Title",
+      "default": "Goat Meat Cube"
+    },
+    {
+      "type": "text",
+      "id": "product_7_price",
+      "label": "Price",
+      "default": "17.99"
+    },
+    {
+      "type": "url",
+      "id": "product_7_url",
+      "label": "Product link"
+    },
+    {
+      "type": "header",
+      "content": "Product 8 - Golden Pompano"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_8_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "product_8_title",
+      "label": "Title",
+      "default": "Golden Pompano"
+    },
+    {
+      "type": "text",
+      "id": "product_8_price",
+      "label": "Price",
+      "default": "4.99"
+    },
+    {
+      "type": "url",
+      "id": "product_8_url",
+      "label": "Product link"
+    },
+    {
+      "type": "header",
+      "content": "Product 9 - Mackerel Fish"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_9_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "product_9_title",
+      "label": "Title",
+      "default": "Mackerel Fish"
+    },
+    {
+      "type": "text",
+      "id": "product_9_price",
+      "label": "Price",
+      "default": "5.99"
+    },
+    {
+      "type": "url",
+      "id": "product_9_url",
+      "label": "Product link"
+    },
+    {
+      "type": "header",
+      "content": "Product 10 - Red Snapper"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_10_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "product_10_title",
+      "label": "Title",
+      "default": "Red Snapper"
+    },
+    {
+      "type": "text",
+      "id": "product_10_price",
+      "label": "Price",
+      "default": "9.99"
+    },
+    {
+      "type": "url",
+      "id": "product_10_url",
+      "label": "Product link"
+    },
+    {
+      "type": "header",
+      "content": "Product 11 - Snails"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_11_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "product_11_title",
+      "label": "Title",
+      "default": "Snails"
+    },
+    {
+      "type": "text",
+      "id": "product_11_price",
+      "label": "Price",
+      "default": "15.99"
+    },
+    {
+      "type": "url",
+      "id": "product_11_url",
+      "label": "Product link"
+    },
+    {
+      "type": "header",
+      "content": "Product 12 - Tilapia"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_12_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "product_12_title",
+      "label": "Title",
+      "default": "Tilapia"
+    },
+    {
+      "type": "text",
+      "id": "product_12_price",
+      "label": "Price",
+      "default": "3.50"
+    },
+    {
+      "type": "url",
+      "id": "product_12_url",
+      "label": "Product link"
+    },
+    {
+      "type": "header",
+      "content": "Product 13 - Beef Soup Bone"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_13_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "product_13_title",
+      "label": "Title",
+      "default": "Beef Soup Bone"
+    },
+    {
+      "type": "text",
+      "id": "product_13_price",
+      "label": "Price",
+      "default": "7.99"
+    },
+    {
+      "type": "url",
+      "id": "product_13_url",
+      "label": "Product link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Meats & seafood grid"
+    }
+  ]
+}
+{% endschema %}
